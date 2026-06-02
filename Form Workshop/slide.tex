@@ -1,0 +1,106 @@
+\documentclass[11pt]{beamer}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\UseRawInputEncoding
+
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage{verbatim}
+\usepackage{smartdiagram}
+\usepackage{unicode-math}
+%\setmathfont{}
+\usepackage{comment}
+\usepackage{xcolor}
+% Cannot enable in Xelatex
+\usepackage{pgfpages}
+% \setbeameroption{hide notes} % Only slides
+% \setbeameroption{show only notes} % Only notes
+% \setbeameroption{show notes on second screen}
+\usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra}
+\usepackage{graphicx,listings,stackengine}
+
+\usepackage{tikz}
+\usepackage{tikz-feynman}
+\usepackage[compat=1.0.0]{tikz-feynman}
+\usepackage{float}
+
+%% Enable only in Xelatex
+% \usepackage{pstricks}
+\usepackage{feynmp-auto} % or feynmp if you prefer
+% Feynman diagrams
+%\usepackage{feynmp}
+%\usepackage{feynmf}
+\DeclareGraphicsRule{*}{mps}{*}{} % for being able to read the produced file
+
+\author{Ana Costa Pereira}
+\title{Parallel scalings}
+\institute [University of Liverpool] {\href{mailto:Ana.Costa-Pereira@liverpool.ac.uk}{\underline{Ana.Costa-Pereira@liverpool.ac.uk}}}
+\date{26/06/2026}
+\usepackage{QUT}
+
+% defs
+\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}
+\def\env#1{\texttt{\color{blue}\footnotesize #1}}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{halfgray}{gray}{0.55}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\bfseries\color{deepblue},
+    emphstyle=\ttfamily\color{deepred},    % Custom highlighting style
+    stringstyle=\color{deepgreen},
+    numbers=left,
+    numberstyle=\small\color{halfgray},
+    rulesepcolor=\color{red!20!green!20!blue!20},
+    frame=shadowbox,
+}
+
+\setbeamercolor{block body alerted}{bg=alerted text.fg!10}
+\setbeamercolor{block title alerted}{bg=alerted text.fg!20}
+\setbeamercolor{block body}{bg=structure!10}
+\setbeamercolor{block title}{bg=structure!20}
+\setbeamercolor{block body example}{bg=green!10}
+\setbeamercolor{block title example}{bg=green!20}
+
+\begin{document}
+%
+%
+% Capa
+%
+%
+\begin{frame}
+    \titlepage
+    \begin{figure}[htpb]
+        \begin{center}
+           \includegraphics[width=0.35\linewidth]{logo.png}
+        \end{center}
+    \end{figure}
+        \begin{figure}[htpb]
+        \begin{center}
+           \includegraphics[width=0.35\linewidth]{logo_livinno.jpg}
+        \end{center}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\end{frame}
+
+
+
+\end{document}
