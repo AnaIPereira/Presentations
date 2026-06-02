@@ -23,7 +23,7 @@
 \usepackage{tikz}
 \usepackage{tikz-feynman}
 \usepackage[compat=1.0.0]{tikz-feynman}
-\usepackage{float}
+%\usepackage{float}
 
 %% Enable only in Xelatex
 % \usepackage{pstricks}
@@ -33,9 +33,9 @@
 %\usepackage{feynmf}
 \DeclareGraphicsRule{*}{mps}{*}{} % for being able to read the produced file
 
-\author{Ana Costa Pereira}
-\title{Parallel scalings}
-\institute [University of Liverpool] {\href{mailto:Ana.Costa-Pereira@liverpool.ac.uk}{\underline{Ana.Costa-Pereira@liverpool.ac.uk}}}
+\author{Ana Costa Pereira, Joshua Davies}
+\title{Parallel Scaling}
+%\institute [University of Liverpool]{\href{mailto:Ana.Costa-Pereira@liverpool.ac.uk}{\underline{Ana.Costa-Pereira@liverpool.ac.uk}}}
 \date{26/06/2026}
 \usepackage{QUT}
 
@@ -94,12 +94,129 @@
 
 
 
+
+
+
+
+\section{Parallel scalings}
+
 \begin{frame}
 \begin{itemize}
-\item 
+\item Parallel scalings: scaling of the tests before the changes at different thread count, screenshots of the distribution of work between main thread and working threads from profiler, comment on performance of different tests
 \end{itemize}
-
 \end{frame}
+
+
+
+
+
+
+\begin{frame}
+\begin{figure}
+\includegraphics[scale=.35]{images/sortbot.png}
+\end{figure}
+\begin{itemize}
+\item Running in parallel: Sortbots send terms between each other and to the master
+\end{itemize}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+Working of the code:
+\begin{itemize}
+\item Terms are allowed to overlap between blocks;
+\item Reading thread always locks pair of locks - the current thread and the previous thread;
+\item 0th block - the overlap in the end of term is copied to 0th so that the terms are contiguous - this is no longer needed when we impose that only full terms can fit into the blocks
+\end{itemize}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+Before changes
+\begin{itemize}
+\item Default buffer sizes were increased over time 
+\item Size of sortbots increased;
+\item The output from a worker fits in a single block $\longrightarrow$ no advantage on running in parallel;
+\item Each stage of sortbot merge tree runs one after the other
+\item Terms can be partially shared between blocks: when a term is being written in a block and the block finishes, the term keeps being written into the next block
+\end{itemize}
+\end{frame}
+
+
+
+
+
+
+
+
+\begin{frame}
+After changes
+\begin{itemize}
+\item Blocks are made smaller
+\item Whole terms can only be written in one block: if it does not fit, it goes into the next block
+\item Workers that fill the blocks try to detect if there is a reader waiting for them
+\item Obtain a lock of the block before filling the block; if not, it means the reading thread already has the lock which means that it is processing the block which means it wants small terms from the current filling block, so we move on to the next block in writing thread
+\item There is always a minimum number of terms in the block - MINIMUMNUMBEROFTERMS
+\end{itemize}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+Some results after the changes
+\begin{itemize}
+\item There is no decrease in performance for any tests
+\item There is a performance imrovement for benchmarks where term merging is expensive (PolyRatFun, PolyRatFunExpand)
+\item Forcer, mbox1l
+\end{itemize}
+\end{frame}
+
+
+
+
+
+\section{SortBotMerge}
+
+\begin{frame}
+\begin{itemize}
+\item SortBotMerge: Explain the changes introduced - NUMBEROFBLOCKSINSORT, MINMUMNUMBEROSTERMS and final choice of parameters
+\item How did we change the code? Explin logic of the main changes
+\item Show results for different tests - improvements in scaling - plots and also profiler screenchots for the tests that are most affected
+\end{itemize}
+\end{frame}
+
+
+
+
+
+
+
+
+
+\section{Adition of new SortBot}
+
+\begin{frame}
+\begin{itemize}
+\item Explain how the sortbots and main thread split the work as they work in parallel - draw tree diagram with sortbots as example
+\item Explain how we introduce a new sortbotand how that changes the splitting of the work, especially for the master, which now will be only writting
+\item Explain logic of the changes made in the code
+\item Explain results for the current benchmarks - not a significative difference because wither most time is spent in sorting or in writing, so the changes do not impact a lot
+\item Introduce new test where the splitting between sorting and writing is more equal, and show screenshot fro profiler
+\item add some results from running this in higher number of threads
+\end{itemize}
+\end{frame}
+
+
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.2.9)  2 JUN 2026 12:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.2.9)  2 JUN 2026 21:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1555,8 +1555,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.26 \usepackage
-                {float}
+l.27 
+     
 The package tikz-feynman has already been loaded with options:
   []
 There has now been an attempt to load it with options
@@ -1566,22 +1566,14 @@ Adding the global options:
 to your \documentclass declaration may fix this.
 Try typing  <return>  to proceed.
 
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count380
-\float@exts=\toks54
-\float@box=\box141
-\@float@everytoks=\toks55
-\@floatcapt=\box142
-)
 (/usr/share/texlive/texmf-dist/tex/latex/feynmp-auto/feynmp-auto.sty
 Package: feynmp-auto 2013/05/03 v1.1 Automatic processing of feynmp graphics
 
 (/usr/share/texmf/tex/latex/feynmf/feynmp.sty
 Package: feynmp 1996/12/02 v1.08 LaTeX/MetaPost Feynman Diagram Package (ohl)
 \@outfmf=\write6
-\fmfbuf@=\toks56
-\c@fmfgraph=\count381
+\fmfbuf@=\toks54
+\c@fmfgraph=\count380
 )
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
@@ -1645,17 +1637,17 @@ LaTeX Font Info:    ... okay on input line 68.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count382
+\scratchcounter=\count381
 \scratchdimen=\dimen346
-\scratchbox=\box143
-\nofMPsegments=\count383
-\nofMParguments=\count384
-\everyMPshowfont=\toks57
-\MPscratchCnt=\count385
+\scratchbox=\box141
+\nofMPsegments=\count382
+\nofMParguments=\count383
+\everyMPshowfont=\toks55
+\MPscratchCnt=\count384
 \MPscratchDim=\dimen347
-\MPnumerator=\count386
-\makeMPintoPDFobject=\count387
-\everyMPtoPDFconversion=\toks58
+\MPnumerator=\count385
+\makeMPintoPDFobject=\count386
+\everyMPtoPDFconversion=\toks56
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1676,7 +1668,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count388
+\c@section@level=\count387
 )
 LaTeX Info: Redefining \ref on input line 68.
 LaTeX Info: Redefining \pageref on input line 68.
@@ -1711,7 +1703,7 @@ Dictionary: translator-numbers-dictionary, Language: English
 ry-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-\c@lstlisting=\count389
+\c@lstlisting=\count388
 
 
 Package tikz-feynman Warning: LuaTeX is required if you wish to have vertices a
@@ -1724,29 +1716,12 @@ mpat=1.1.0]{tikz-feynman} so that you can be warned if TikZ-Feynman changes. on
  input line 68.
 
 (./slide.nav)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 86.
-
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 86.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 86
-.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-<logo.png, id=42, 446.66875pt x 113.42375pt>
+<logo.png, id=53, 446.66875pt x 113.42375pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 86.
 (pdftex.def)             Requested size: 107.55333pt x 27.31052pt.
-<logo_livinno.jpg, id=43, 1003.75pt x 356.33125pt>
+<logo_livinno.jpg, id=54, 1003.75pt x 356.33125pt>
 File: logo_livinno.jpg Graphic file (type jpg)
 <use logo_livinno.jpg>
 Package pdftex.def Info: logo_livinno.jpg  used on input line 86.
@@ -1756,7 +1731,45 @@ Package pdftex.def Info: logo_livinno.jpg  used on input line 86.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./logo.png> <./logo_livinn
 o.jpg>] (./slide.toc) [2
 
-] [3
+]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 107
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 107
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 10
+7.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+) [3
+
+]
+<images/sortbot.png, id=147, 783.92876pt x 282.05376pt>
+File: images/sortbot.png Graphic file (type png)
+<use images/sortbot.png>
+Package pdftex.def Info: images/sortbot.png  used on input line 121.
+(pdftex.def)             Requested size: 274.37918pt x 98.72028pt.
+ [4
+
+ <./images/sortbot.png>] [5
+
+] [6
+
+] [7
+
+] [8
+
+] [9
+
+] [10
 
 ]
 \tf@nav=\write8
@@ -1770,25 +1783,25 @@ o.jpg>] (./slide.toc) [2
 
  (./slide.aux)
 Package rerunfilecheck Info: File `slide.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 04AF2ADDDD5EB681FC287D64536F23D5;396.
  ) 
 Here is how much of TeX's memory you used:
- 32085 strings out of 480129
- 668430 string characters out of 5893410
- 962690 words of memory out of 5000000
- 49326 multiletter control sequences out of 15000+600000
- 479129 words of font info for 59 fonts, out of 8000000 for 9000
+ 32093 strings out of 480129
+ 668725 string characters out of 5893410
+ 961411 words of memory out of 5000000
+ 49321 multiletter control sequences out of 15000+600000
+ 479139 words of font info for 56 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  128i,14n,122p,406b,680s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/
 type1/public/cm-super/sfss0600.pfb></usr/share/texmf/fonts/type1/public/cm-supe
-r/sfss0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb></usr
+r/sfss1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb></usr
 /share/texmf/fonts/type1/public/cm-super/sfss1440.pfb>
-Output written on slide.pdf (3 pages, 231495 bytes).
+Output written on slide.pdf (10 pages, 254674 bytes).
 PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
- 7 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 363 PDF objects out of 1000 (max. 8388607)
+ 307 compressed objects within 4 object streams
+ 24 named destinations out of 1000 (max. 500000)
+ 190 words of extra memory for PDF output out of 10000 (max. 10000000)
 
