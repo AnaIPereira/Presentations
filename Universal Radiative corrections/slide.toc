@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Semi-leptonic kaon decays}{4}{0}{1}
+\beamer@sectionintoc {2}{Ratio of $V_{us}/V_{ud}$}{6}{0}{2}
+\beamer@sectionintoc {3}{Radiative corrections and EFT formalism}{9}{0}{3}
+\beamer@sectionintoc {4}{NLO EW corrections}{10}{0}{4}
+\beamer@sectionintoc {5}{NNLO EW corrections}{12}{0}{5}
