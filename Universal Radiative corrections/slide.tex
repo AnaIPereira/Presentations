@@ -103,7 +103,7 @@ Determinations of $V_{ud}$}
 
 
 
-\begin{frame}
+\begin{frame}{Motivation}
 \begin{itemize}
 \item SM shortcomings: Origin of flavour, CP problem, dark energy, dark matter, matter/anti-matter asymmetry;
 \item CKM (mixing of quark flavour eigenstates) tested at level $0.01\%$;
@@ -111,9 +111,25 @@ Determinations of $V_{ud}$}
 \item Measure decay rates: $K$, $0^+ \longrightarrow 0^+$, $\Pi$, neutron decay;
 \item Semileptonic decays: $K_{l3}$, $0^+ \longleftarrow 0^+$, neutron decay;
 \item Leptonic decays:  $K_{l2}$;
-\item Status of $V_{ud}$, $V_{us}$;
+\item Status of $V_{us}:$ Kaon decays;
+\item Status of $V_{ud}:$ superallowed $\beta$ decays, neutron decay, pion decays;
 \end{itemize}
 
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{CKM matrix}
+\begin{figure}
+    \centering
+    \includegraphics[scale=.25]{ckm.png}
+\end{figure}
+\begin{equation}
+   |V_{ud}|^2 + |V_{us}|^2- O|V_{ub}|^2 = 1
+\end{equation}
 \end{frame}
 
 
@@ -144,6 +160,13 @@ I_{K\ell}^{(0)}
 \item $\delta_{SU(2)}^{K\pi}$ strong isospin breakig correction
 \item $\delta_{\mathrm{EM}}^{K\ell}$ long distance EW corrections
 \end{itemize}
+\begin{equation}
+\langle \pi(p_{\pi})|\bar{s}\gamma^{\mu}u|K(p_{K})\rangle
+=
+(p_{K}+p_{\pi})^{\mu} f_{+}(q^{2})
++
+(p_{K}-p_{\pi})^{\mu} f_{-}(q^{2}),
+\end{equation}
 \textbf{Experimental inputs}
 \[
 |V_{us}|\,f_+(0)=0.21654(41)
@@ -179,9 +202,14 @@ f_+(0)=0.9698(17)
 
 
 
+
+
+
+
 \section{Ratio of $V_{us}/V_{ud}$}
 
-\begin{frame}
+\begin{frame}{Ratio of $V_{us}/V_{ud}$}
+\centering
 \begin{equation*}
 \frac{\Gamma(K^\pm_{\mu2(\gamma)})}
      {\Gamma(\pi^\pm_{\mu2(\gamma)})}
@@ -192,6 +220,16 @@ f_+(0)=0.9698(17)
      {M_{\pi^\pm}\left(1-m_\mu^2/M_{\pi^\pm}^2\right)^2}
 \left(1+\delta_{\rm EM}\right)
 \end{equation*}
+\begin{equation}
+\langle 0|\bar{q}_1\gamma^{\mu}\gamma_{5}q_2|P(p)\rangle
+=
+i\,p^{\mu}f_P,
+\qquad
+P=\pi^+,\,K^+.
+\end{equation}
+\begin{itemize}
+\item Average of $f_K/f_Pi$ in isosymmetric QCD;
+\end{itemize}
 
 \textbf{Experimental inputs}
 \[
@@ -201,11 +239,10 @@ f_+(0)=0.9698(17)
 0.27599(41)
 \]
 
-\[
-|V_{ud}|=0.97373(31)
-\qquad
-(\text{superallowed }\beta\text{ decays})
-\]
+\begin{itemize}
+\item Isospin correction from the lattice can be improved by higher statistics in contrast with extractions from ChPT;
+\item Isopsin corrections are becoming relevant for CKM elements extraction at the current level of precision of lattice inputs;
+\end{itemize}
 \end{frame}
 
 
@@ -219,9 +256,16 @@ f_+(0)=0.9698(17)
 
 \begin{frame}
 \begin{figure}
-\includegraphics[scale=.25]{flag.png}
+\includegraphics[scale=.2]{flag.png}
 \end{figure}
 \small
+\[
+|V_{ud}|=0.97373(31)
+\qquad
+(\text{superallowed }\beta\text{ decays})
+\]
+
+
 \[
 \frac{f_{K^\pm}}{f_{\pi^\pm}}
 =
@@ -246,14 +290,12 @@ f_+(0)=0.9698(17)
 
 
 
-\begin{frame}{CKM matrix}
+\begin{frame}{Lattice constrains}
 \begin{figure}
     \centering
-    \includegraphics[scale=.2]{flagcomb.png}
+    \includegraphics[scale=.25]{f.png}
+    \caption{$V_{ud}$ and $V_{ud}$ using lattice QCD input and $V_{ud}$ extracted from nuclear $\beta$ decays.}
 \end{figure}
-\begin{equation}
-   |V_{ud}|^2 + |V_{us}|^2- O|V_{ub}|^2 = 1
-\end{equation}
 \end{frame}
 
 
@@ -261,6 +303,86 @@ f_+(0)=0.9698(17)
 
 
 
+
+
+
+
+
+\begin{frame}{$V_{ud}$ from pion decay}
+\begin{equation}
+\Gamma_{\pi\beta}
+=
+\frac{G_F^2 |V_{ud}|^2 M_{\pi}^{5}}
+     {64\pi^{3}}
+\,|g_V^\pi|^{2}
+\,|f_{+}^{\pi}(0)|^{2}
+\,I_{\pi\ell}
+\left(1+\Delta I_{\pi\ell}\right)
+\end{equation}
+
+\begin{itemize}
+    \item $f_{+}^{\pi}(0)$: pion vector form factor.
+    \item $I_{\pi\ell}$: phase-space integral.
+    \item $\Delta_{\mathrm{RC}}^{\pi\ell}$: radiative corrections.
+    \item $g_{V}^{\pi}$: effective vector coupling containing the short-distance electroweak corrections.
+\end{itemize}
+\[
+\Delta_{\mathrm{RC}}^{\pi\ell}
+=
+0.03403(11)
+\]
+
+\[
+V_{ud}^{\pi}=0.97346(283)
+\]
+\begin{itemize}
+    \item The Behrends--Sirlin--Ademollo--Gatto theorem implies
+    \[
+    f_+^\pi(0)\simeq 1-7\times10^{-6},
+    \]
+    making isospin-breaking corrections negligible.
+\end{itemize}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+\begin{frame}{Neutron decay}
+
+\begin{equation}
+\frac{1}{\tau_n}
+=
+\frac{G_F^2 |V_{ud}|^2}{2\pi^3}
+\,m_e^5\,
+f\,
+(1+3g_A^2)\,
+(1+\Delta_R),
+\end{equation}
+
+\begin{itemize}
+    \item $f$: phase-space factor.
+    \item $g_A$: axial-vector coupling.
+    \item $\Delta_R$: electroweak radiative corrections.
+\end{itemize}
+
+\begin{align*}
+\Delta_R^V &= 2.436(16)\%,\\
+|V_{ud}|_n &= 0.97410(41).
+\end{align*}
+
+\begin{itemize}
+    \item First NLL calculation of mixed $O(\alpha\alpha_s^2)$ corrections.
+    \item Reduces theoretical uncertainty in $\Delta_R^V$.
+    \item Improves consistency of first-row CKM unitarity tests.
+\end{itemize}
+
+\end{frame}
 
 
 
@@ -592,10 +714,28 @@ J_f^{-1}(\mu_0)\,
 C^{(f)}(\mu_0)
 \end{equation}
 
+Evolution kernel at LO
+
+\begin{equation}
+U_f(\mu)
+=
+\left(
+\frac{\alpha^{(f)}(\mu)}
+{\alpha(M_Z)}
+\right)^{-\frac{\gamma^{(0)}}{2 \beta^{(0)}}}
+\end{equation}
+
+scheme independence
+
+\begin{equation}
+C = U_f^{-1}(\mu_0)\,
+J_f^{-1}(\mu_0)\,
+C^{(f)}(\mu_0)
+\end{equation}
+
 insert graph with scale dependence
 
 \end{frame}
-
 
 
 
