@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.2.9)  5 JUN 2026 16:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.2.9)  6 JUN 2026 16:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1589,15 +1589,15 @@ Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerinnerthemecircles.sty))
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 69.
+(hyperref)                removing `math shift' on input line 70.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 69.
+(hyperref)                removing `subscript' on input line 70.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 69.
+(hyperref)                removing `math shift' on input line 70.
 
 (./slide.aux
 
@@ -1606,24 +1606,24 @@ LaTeX Warning: Label `1loopdiag' multiply defined.
 )
 \openout1 = `slide.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1681,7 +1681,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 69.
+Package hyperref Info: Link coloring OFF on input line 70.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1694,9 +1694,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count388
 )
-LaTeX Info: Redefining \ref on input line 69.
-LaTeX Info: Redefining \pageref on input line 69.
-LaTeX Info: Redefining \nameref on input line 69.
+LaTeX Info: Redefining \ref on input line 70.
+LaTeX Info: Redefining \pageref on input line 70.
+LaTeX Info: Redefining \nameref on input line 70.
 
 (./slide.out) (./slide.out)
 \@outlinefile=\write7
@@ -1732,26 +1732,26 @@ Dictionary: translator-theorem-dictionary, Language: English
 
 Package tikz-feynman Warning: LuaTeX is required if you wish to have vertices a
 utomatically placed. You can disable this warning by setting /tikzfeynman/warn 
-luatex=false on input line 69.
+luatex=false on input line 70.
 
 
 Package tikz-feynman Warning: Consider loading TikZ-Feynman with \usepackage[co
 mpat=1.1.0]{tikz-feynman} so that you can be warned if TikZ-Feynman changes. on
- input line 69.
+ input line 70.
 
 (./slide.nav)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 69.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
 
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 69.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 69
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 70
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
@@ -1760,12 +1760,12 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 <logo.png, id=62, 446.66875pt x 113.42375pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 87.
+Package pdftex.def Info: logo.png  used on input line 88.
 (pdftex.def)             Requested size: 107.55098pt x 27.31052pt.
 <logo_livinno.jpg, id=63, 1003.75pt x 356.33125pt>
 File: logo_livinno.jpg Graphic file (type jpg)
 <use logo_livinno.jpg>
-Package pdftex.def Info: logo_livinno.jpg  used on input line 87.
+Package pdftex.def Info: logo_livinno.jpg  used on input line 88.
 (pdftex.def)             Requested size: 107.55098pt x 38.1798pt.
  [1
 
@@ -1774,249 +1774,243 @@ o.jpg>] (./slide.toc) [2
 
 ] [3
 
-]
-<ckm.png, id=171, 734.24312pt x 678.03313pt>
-File: ckm.png Graphic file (type png)
-<use ckm.png>
-Package pdftex.def Info: ckm.png  used on input line 133.
-(pdftex.def)             Requested size: 183.56033pt x 169.50786pt.
- [4
+] [4
 
- <./ckm.png>]
-Overfull \hbox (23.45172pt too wide) detected at line 175
+] [5
+
+]
+<f.png, id=223, 859.21pt x 665.48625pt>
+File: f.png Graphic file (type png)
+<use f.png>
+Package pdftex.def Info: f.png  used on input line 154.
+(pdftex.def)             Requested size: 214.80197pt x 166.37115pt.
+ [6
+
+ <./f.png>]
+Overfull \hbox (23.45172pt too wide) detected at line 199
 \OT1/cmr/m/n/10.95 ^^@  [] = [] \OML/cmm/m/it/10.95 C[] S[] \OMS/cmsy/m/n/10.95
  j\OML/cmm/m/it/10.95 V[]\OMS/cmsy/m/n/10.95 j[] []\OML/cmm/m/it/10.95 f[]\OT1/
 cmr/m/n/10.95 (0)[][] \OML/cmm/m/it/10.95 I[] [][]
  []
 
-[5
+[7
 
 ]
-<flag1.png, id=230, 824.07875pt x 682.55pt>
+<flag1.png, id=285, 824.07875pt x 682.55pt>
 File: flag1.png Graphic file (type png)
 <use flag1.png>
-Package pdftex.def Info: flag1.png  used on input line 199.
+Package pdftex.def Info: flag1.png  used on input line 223.
 (pdftex.def)             Requested size: 206.01918pt x 170.63708pt.
- [6
+ [8
 
  <./flag1.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 209.
+(hyperref)                removing `math shift' on input line 233.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 209.
+(hyperref)                removing `subscript' on input line 233.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 209.
+(hyperref)                removing `subscript' on input line 233.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 209.
+(hyperref)                removing `math shift' on input line 233.
 
-[7
+[9
 
 ]
-<flag.png, id=286, 824.07875pt x 682.55pt>
+<flag.png, id=339, 824.07875pt x 682.55pt>
 File: flag.png Graphic file (type png)
 <use flag.png>
-Package pdftex.def Info: flag.png  used on input line 284.
+Package pdftex.def Info: flag.png  used on input line 308.
 (pdftex.def)             Requested size: 164.81282pt x 136.50758pt.
- [8
+ [10
 
- <./flag.png>]
-<f.png, id=317, 859.21pt x 665.48625pt>
-File: f.png Graphic file (type png)
-<use f.png>
-Package pdftex.def Info: f.png  used on input line 299.
-(pdftex.def)             Requested size: 214.80197pt x 166.37115pt.
- [9
+ <./flag.png>] [11
 
- <./f.png>] [10
-
-] [11
+] [12
 
 ]
-<full.png, id=396, 555.07375pt x 459.7175pt>
+<full.png, id=420, 555.07375pt x 459.7175pt>
 File: full.png Graphic file (type png)
 <use full.png>
-Package pdftex.def Info: full.png  used on input line 432.
+Package pdftex.def Info: full.png  used on input line 447.
 (pdftex.def)             Requested size: 277.53618pt x 229.85818pt.
-<eft.png, id=397, 555.07375pt x 459.7175pt>
+<eft.png, id=421, 555.07375pt x 459.7175pt>
 File: eft.png Graphic file (type png)
 <use eft.png>
-Package pdftex.def Info: eft.png  used on input line 432.
+Package pdftex.def Info: eft.png  used on input line 447.
 (pdftex.def)             Requested size: 277.53618pt x 229.85818pt.
- [12
+ [13
 
  <./full.png> <./eft.png>]
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
-tance' requires LuaTeX. It will be ignored. on input line 554.
+tance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
-stance' requires LuaTeX. It will be ignored. on input line 554.
+stance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
-distance' requires LuaTeX. It will be ignored. on input line 554.
+distance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
-tance' requires LuaTeX. It will be ignored. on input line 554.
+tance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
-stance' requires LuaTeX. It will be ignored. on input line 554.
+stance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
-distance' requires LuaTeX. It will be ignored. on input line 554.
+distance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
-tance' requires LuaTeX. It will be ignored. on input line 554.
+tance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
-stance' requires LuaTeX. It will be ignored. on input line 554.
+stance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
-distance' requires LuaTeX. It will be ignored. on input line 554.
+distance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
-tance' requires LuaTeX. It will be ignored. on input line 554.
+tance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
-stance' requires LuaTeX. It will be ignored. on input line 554.
+stance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
-distance' requires LuaTeX. It will be ignored. on input line 554.
+distance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
-tance' requires LuaTeX. It will be ignored. on input line 554.
+tance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
-stance' requires LuaTeX. It will be ignored. on input line 554.
+stance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
-distance' requires LuaTeX. It will be ignored. on input line 554.
+distance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
-tance' requires LuaTeX. It will be ignored. on input line 554.
+tance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
-stance' requires LuaTeX. It will be ignored. on input line 554.
+stance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
-distance' requires LuaTeX. It will be ignored. on input line 554.
+distance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
-tance' requires LuaTeX. It will be ignored. on input line 554.
+tance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
-stance' requires LuaTeX. It will be ignored. on input line 554.
+stance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
-distance' requires LuaTeX. It will be ignored. on input line 554.
+distance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
-tance' requires LuaTeX. It will be ignored. on input line 554.
+tance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
-stance' requires LuaTeX. It will be ignored. on input line 554.
+stance' requires LuaTeX. It will be ignored. on input line 569.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
-distance' requires LuaTeX. It will be ignored. on input line 554.
+distance' requires LuaTeX. It will be ignored. on input line 569.
 
-[13
+[14
 
 pdfTeX warning (ext4): destination with the same identifier (name{1loopdiag}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.554 \end{frame}
-                 ] [14
+l.569 \end{frame}
+                 ] [15
 
 ]
-<eft2l.png, id=480, 1237.62375pt x 690.58pt>
+<eft2l.png, id=505, 1237.62375pt x 690.58pt>
 File: eft2l.png Graphic file (type png)
 <use eft2l.png>
-Package pdftex.def Info: eft2l.png  used on input line 679.
+Package pdftex.def Info: eft2l.png  used on input line 694.
 (pdftex.def)             Requested size: 185.63554pt x 103.58252pt.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
-tance' requires LuaTeX. It will be ignored. on input line 679.
+tance' requires LuaTeX. It will be ignored. on input line 694.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
-stance' requires LuaTeX. It will be ignored. on input line 679.
+stance' requires LuaTeX. It will be ignored. on input line 694.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
-distance' requires LuaTeX. It will be ignored. on input line 679.
+distance' requires LuaTeX. It will be ignored. on input line 694.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
-tance' requires LuaTeX. It will be ignored. on input line 679.
+tance' requires LuaTeX. It will be ignored. on input line 694.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
-stance' requires LuaTeX. It will be ignored. on input line 679.
+stance' requires LuaTeX. It will be ignored. on input line 694.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
-distance' requires LuaTeX. It will be ignored. on input line 679.
+distance' requires LuaTeX. It will be ignored. on input line 694.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
-tance' requires LuaTeX. It will be ignored. on input line 679.
+tance' requires LuaTeX. It will be ignored. on input line 694.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
-stance' requires LuaTeX. It will be ignored. on input line 679.
+stance' requires LuaTeX. It will be ignored. on input line 694.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
-distance' requires LuaTeX. It will be ignored. on input line 679.
+distance' requires LuaTeX. It will be ignored. on input line 694.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
-tance' requires LuaTeX. It will be ignored. on input line 679.
+tance' requires LuaTeX. It will be ignored. on input line 694.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
-stance' requires LuaTeX. It will be ignored. on input line 679.
+stance' requires LuaTeX. It will be ignored. on input line 694.
 
 
 Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
-distance' requires LuaTeX. It will be ignored. on input line 679.
+distance' requires LuaTeX. It will be ignored. on input line 694.
 
-[15
+[16
 
- <./eft2l.png>] [16
-
-] [17
+ <./eft2l.png>] [17
 
 ]
 No file slide.bbl.
@@ -2038,10 +2032,10 @@ Package rerunfilecheck Info: File `slide.out' has not changed.
 (rerunfilecheck)             Checksum: 57F8D4E4CC9A69F053929F18B6B02154;836.
  ) 
 Here is how much of TeX's memory you used:
- 32642 strings out of 480129
- 678660 string characters out of 5893410
- 1041114 words of memory out of 5000000
- 49832 multiletter control sequences out of 15000+600000
+ 32643 strings out of 480129
+ 678757 string characters out of 5893410
+ 1041316 words of memory out of 5000000
+ 49834 multiletter control sequences out of 15000+600000
  487551 words of font info for 85 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  128i,16n,122p,406b,2030s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2065,10 +2059,10 @@ r/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf/fonts/
 type1/public/cm-super/sfss1095.pfb></usr/share/texmf/fonts/type1/public/cm-supe
 r/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1440.pfb></usr
 /share/texmf/fonts/type1/public/cm-super/sfsx1095.pfb>
-Output written on slide.pdf (17 pages, 937092 bytes).
+Output written on slide.pdf (17 pages, 774948 bytes).
 PDF statistics:
- 665 PDF objects out of 1000 (max. 8388607)
+ 663 PDF objects out of 1000 (max. 8388607)
  554 compressed objects within 6 object streams
  43 named destinations out of 1000 (max. 500000)
- 236 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 231 words of extra memory for PDF output out of 10000 (max. 10000000)
 

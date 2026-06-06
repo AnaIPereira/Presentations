@@ -36,6 +36,7 @@
 \author{Ana Costa Pereira, Martin Gorbahn, Francesco Moretti, Kai Sieja, Emmanuele Stamou}
 \title{Universal Radiative Corrections for Precision
 Determinations of $V_{ud}$}
+\subtitle{BEACH conference}
 \institute [University of Liverpool] {\href{mailto:Ana.Costa-Pereira@liverpool.ac.uk}{\underline{Ana.Costa-Pereira@liverpool.ac.uk}}}
 \date{08/06/2026}
 \usepackage{QUT}
@@ -95,9 +96,31 @@ Determinations of $V_{ud}$}
 
 
 
+\begin{frame}
+\begin{itemize}
+\item SM motivation - split theory and exp
+\item define acronims
+\item decays Kl3 - feyn diags as ex
+\item more info in plots context
+\item smoth doen transition to my computations
+\end{itemize}
+\end{frame}
 
 
 
+
+\begin{frame}
+\begin{itemize}
+\item numbers off eq
+\item move definition of EFT before pion and neutron
+\item explain the calculations that have been done by martin and francesno at NNLOQCD/EW
+\item talk about precision of Vud and is very precise with these new calculation but EW corrections can improve uncertainty which we are doing and use this to motivate our work
+\item take off 1 loop diagrams
+\item add tadpole box on 2 loop
+\item talk about tadpoles and how they contribute
+\item present C in fixed scheme
+\end{itemize}
+\end{frame}
 
 
 
@@ -105,14 +128,11 @@ Determinations of $V_{ud}$}
 
 \begin{frame}{Motivation}
 \begin{itemize}
-\item SM shortcomings: Origin of flavour, CP problem, dark energy, dark matter, matter/anti-matter asymmetry;
-\item CKM (mixing of quark flavour eigenstates) tested at level $0.01\%$;
+\item CKM (mixing of quark flavour eigenstates)
 \item Cabbibo angle anomaly;
 \item Measure decay rates: $K$, $0^+ \longrightarrow 0^+$, $\Pi$, neutron decay;
-\item Semileptonic decays: $K_{l3}$, $0^+ \longleftarrow 0^+$, neutron decay;
-\item Leptonic decays:  $K_{l2}$;
-\item Status of $V_{us}:$ Kaon decays;
-\item Status of $V_{ud}:$ superallowed $\beta$ decays, neutron decay, pion decays;
+\item $K_{l3}$, $0^+ \longleftarrow 0^+$, neutron decay (SL) and $K_{l2}$ (L);
+\item Status of $V_{us}:$ Kaon decays and status of $V_{ud}:$ superallowed $\beta$ decays, neutron decay, pion decays;
 \end{itemize}
 
 \end{frame}
@@ -122,15 +142,19 @@ Determinations of $V_{ud}$}
 
 
 
-\begin{frame}{CKM matrix}
+
+
+
+\begin{frame}{Lattice constrains}
 \begin{figure}
     \centering
-    \includegraphics[scale=.25]{ckm.png}
+    \includegraphics[scale=.25]{f.png}
+    \caption{$V_{ud}$ and $V_{ud}$ using lattice QCD input and $V_{ud}$ extracted from nuclear $\beta$ decays.}
 \end{figure}
-\begin{equation}
-   |V_{ud}|^2 + |V_{us}|^2- O|V_{ub}|^2 = 1
-\end{equation}
 \end{frame}
+
+
+
 
 
 
@@ -290,15 +314,6 @@ P=\pi^+,\,K^+.
 
 
 
-\begin{frame}{Lattice constrains}
-\begin{figure}
-    \centering
-    \includegraphics[scale=.25]{f.png}
-    \caption{$V_{ud}$ and $V_{ud}$ using lattice QCD input and $V_{ud}$ extracted from nuclear $\beta$ decays.}
-\end{figure}
-\end{frame}
-
-
 
 
 
@@ -420,13 +435,13 @@ f\,
 \end{minipage}
 \end{figure}
 
-\begin{equation}
+\begin{equation*}
      \frac{1}{k^2-m_W^2} \longrightarrow \frac{-1}{m_W^2}
-\end{equation}
+\end{equation*}
 
-\begin{equation}
-    H_{eff}(x) = \dfrac{G_F}{\sqrt{2}} V_{CKM}^{i} C_i(\mu) Q_i(x)
-\end{equation}
+\begin{equation*}
+    H_{eff}(x) = \dfrac{G_F}{\sqrt{2}} V_{CKM} C(\mu) Q(x)
+\end{equation*}
 
 
 \end{frame}
@@ -687,55 +702,6 @@ And the Wilson Coefficients are
 
 
 
-
-
-
-
-
-
-
-
-\begin{frame}{WC and RGE}
-RGE for WC:
-
-\begin{equation}
-\mu \frac{d}{d\mu} C^f_i(\mu)
-=
-\sum_j \gamma^f_{ij} \, C^f_j(\mu),
-\end{equation}
-
-\begin{equation}
-C^{(f)}(\mu)
-=
-J_f(\mu)\,
-U_f(\mu)\,
-U_f^{-1}(\mu_0)\,
-J_f^{-1}(\mu_0)\,
-C^{(f)}(\mu_0)
-\end{equation}
-
-Evolution kernel at LO
-
-\begin{equation}
-U_f(\mu)
-=
-\left(
-\frac{\alpha^{(f)}(\mu)}
-{\alpha(M_Z)}
-\right)^{-\frac{\gamma^{(0)}}{2 \beta^{(0)}}}
-\end{equation}
-
-scheme independence
-
-\begin{equation}
-C = U_f^{-1}(\mu_0)\,
-J_f^{-1}(\mu_0)\,
-C^{(f)}(\mu_0)
-\end{equation}
-
-insert graph with scale dependence
-
-\end{frame}
 
 
 
