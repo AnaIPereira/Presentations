@@ -1,5 +1,8 @@
-\beamer@sectionintoc {1}{Semi-leptonic kaon decays}{7}{0}{1}
-\beamer@sectionintoc {2}{Ratio of $V_{us}/V_{ud}$}{9}{0}{2}
-\beamer@sectionintoc {3}{Radiative corrections and EFT formalism}{13}{0}{3}
-\beamer@sectionintoc {4}{NLO EW corrections}{14}{0}{4}
-\beamer@sectionintoc {5}{NNLO EW corrections}{16}{0}{5}
+\beamer@sectionintoc {1}{CKM matrix}{5}{0}{1}
+\beamer@sectionintoc {2}{Semi-leptonic kaon decays}{6}{0}{2}
+\beamer@sectionintoc {3}{Ratio of $V_{us}/V_{ud}$}{8}{0}{3}
+\beamer@sectionintoc {4}{$V_{ud}$ from pion decay}{10}{0}{4}
+\beamer@sectionintoc {5}{$V_{us}$ from neutron decay}{11}{0}{5}
+\beamer@sectionintoc {6}{EFT formalism}{12}{0}{6}
+\beamer@sectionintoc {7}{NLO EW corrections}{13}{0}{7}
+\beamer@sectionintoc {8}{NNLO EW corrections}{14}{0}{8}

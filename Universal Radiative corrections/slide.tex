@@ -96,6 +96,10 @@ Determinations of $V_{ud}$}
 
 
 
+
+
+
+
 \begin{frame}
 \begin{itemize}
 \item SM motivation - split theory and exp
@@ -103,22 +107,12 @@ Determinations of $V_{ud}$}
 \item decays Kl3 - feyn diags as ex
 \item more info in plots context
 \item smoth doen transition to my computations
-\end{itemize}
-\end{frame}
-
-
-
-
-\begin{frame}
-\begin{itemize}
-\item numbers off eq
 \item move definition of EFT before pion and neutron
 \item explain the calculations that have been done by martin and francesno at NNLOQCD/EW
 \item talk about precision of Vud and is very precise with these new calculation but EW corrections can improve uncertainty which we are doing and use this to motivate our work
 \item take off 1 loop diagrams
 \item add tadpole box on 2 loop
 \item talk about tadpoles and how they contribute
-\item present C in fixed scheme
 \end{itemize}
 \end{frame}
 
@@ -126,7 +120,16 @@ Determinations of $V_{ud}$}
 
 
 
-\begin{frame}{Motivation}
+
+
+
+
+
+
+
+
+
+\begin{frame}{Motivation and Overview}
 \begin{itemize}
 \item CKM (mixing of quark flavour eigenstates)
 \item Cabbibo angle anomaly;
@@ -145,7 +148,11 @@ Determinations of $V_{ud}$}
 
 
 
-\begin{frame}{Lattice constrains}
+
+
+\section{CKM matrix}
+
+\begin{frame}{CKM matrix}
 \begin{figure}
     \centering
     \includegraphics[scale=.25]{f.png}
@@ -184,13 +191,13 @@ I_{K\ell}^{(0)}
 \item $\delta_{SU(2)}^{K\pi}$ strong isospin breakig correction
 \item $\delta_{\mathrm{EM}}^{K\ell}$ long distance EW corrections
 \end{itemize}
-\begin{equation}
+\begin{equation*}
 \langle \pi(p_{\pi})|\bar{s}\gamma^{\mu}u|K(p_{K})\rangle
 =
 (p_{K}+p_{\pi})^{\mu} f_{+}(q^{2})
 +
 (p_{K}-p_{\pi})^{\mu} f_{-}(q^{2}),
-\end{equation}
+\end{equation*}
 \textbf{Experimental inputs}
 \[
 |V_{us}|\,f_+(0)=0.21654(41)
@@ -244,13 +251,13 @@ f_+(0)=0.9698(17)
      {M_{\pi^\pm}\left(1-m_\mu^2/M_{\pi^\pm}^2\right)^2}
 \left(1+\delta_{\rm EM}\right)
 \end{equation*}
-\begin{equation}
+\begin{equation*}
 \langle 0|\bar{q}_1\gamma^{\mu}\gamma_{5}q_2|P(p)\rangle
 =
 i\,p^{\mu}f_P,
 \qquad
 P=\pi^+,\,K^+.
-\end{equation}
+\end{equation*}
 \begin{itemize}
 \item Average of $f_K/f_Pi$ in isosymmetric QCD;
 \end{itemize}
@@ -323,8 +330,14 @@ P=\pi^+,\,K^+.
 
 
 
+
+
+
+
+\section{$V_{ud}$ from pion decay}
+
 \begin{frame}{$V_{ud}$ from pion decay}
-\begin{equation}
+\begin{equation*}
 \Gamma_{\pi\beta}
 =
 \frac{G_F^2 |V_{ud}|^2 M_{\pi}^{5}}
@@ -333,7 +346,7 @@ P=\pi^+,\,K^+.
 \,|f_{+}^{\pi}(0)|^{2}
 \,I_{\pi\ell}
 \left(1+\Delta I_{\pi\ell}\right)
-\end{equation}
+\end{equation*}
 
 \begin{itemize}
     \item $f_{+}^{\pi}(0)$: pion vector form factor.
@@ -367,8 +380,9 @@ V_{ud}^{\pi}=0.97346(283)
 
 
 
+\section{$V_{us}$ from neutron decay}
 
-\begin{frame}{Neutron decay}
+\begin{frame}{$V_{ud}$ from neutron decay}
 
 \begin{equation}
 \frac{1}{\tau_n}
@@ -406,9 +420,14 @@ f\,
 
 
 
-\section{Radiative corrections and EFT formalism}
+\section{EFT formalism}
 
-\begin{frame}{Operator product expansion}
+\begin{frame}{EFT formalism}
+
+\begin{equation*}
+    H_{eff}(x) = \dfrac{G_F}{\sqrt{2}} V_{CKM} C(\mu) Q(x)
+\end{equation*}
+
 \begin{figure}[H]
 \centering
 
@@ -419,18 +438,18 @@ f\,
 \resizebox{0.6\linewidth}{!}{ % scale to 90% of minipage width
 \includegraphics[scale=.5]{full.png}
 }
-\vspace{.2cm}
-\caption{SM tree-level.}
+%\vspace{.2cm}
+%\caption{SM tree-level.}
 \label{treelevelfull}
 \end{minipage}
 \hfill
 \begin{minipage}[b]{0.4\linewidth}
 \centering
-\vspace{.2cm}
+%\vspace{.2cm}
 \resizebox{0.6\linewidth}{!}{ % scale to 90% of minipage width
 \includegraphics[scale=.5]{eft.png}
 }
-\caption{EFT Tree-level.}
+%\caption{EFT Tree-level.}
 \label{treeleveleft}
 \end{minipage}
 \end{figure}
@@ -439,8 +458,9 @@ f\,
      \frac{1}{k^2-m_W^2} \longrightarrow \frac{-1}{m_W^2}
 \end{equation*}
 
+Quark decay normalized to $G_F$:
 \begin{equation*}
-    H_{eff}(x) = \dfrac{G_F}{\sqrt{2}} V_{CKM} C(\mu) Q(x)
+  \mathcal{L}_{G_F} = -\frac{G_F}{\sqrt{2}} Q_\mu -\frac{G_F}{\sqrt{2}} V_{ud} C_{q} Q_q
 \end{equation*}
 
 
@@ -465,11 +485,18 @@ f\,
 
 \section{NLO EW corrections}
 
+
 \begin{frame}{NLO EW corrections}
-\begin{figure}[h]
+
+\begin{figure}
 \centering
-\begin{minipage}[c]{0.45\textwidth}
-\begin{tikzpicture}
+
+%----------------------------------------------------
+% Diagram 1
+%----------------------------------------------------
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.65, transform shape]
 \begin{feynman}
 \vertex (u) at (0,1.5) {\(u\)};
 \vertex (a) at (1.5,1.5);
@@ -491,8 +518,12 @@ f\,
 \end{tikzpicture}
 \end{minipage}
 \hfill
-\begin{minipage}[c]{0.45\textwidth}
-\begin{tikzpicture}
+%----------------------------------------------------
+% Diagram 2
+%----------------------------------------------------
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.65, transform shape]
 \begin{feynman}
 \vertex (u) at (0,1.5) {\(u\)};
 \vertex (a) at (1,1.5);
@@ -506,20 +537,19 @@ f\,
   (u) -- [fermion] (a) -- [fermion, edge label=\(u\)] (a1) -- [fermion] (d),
   (a) -- [boson, edge label'=\(Z\)] (c),
   (a1) -- [boson, edge label=\(W\)] (c1),
-  (e) -- [fermion] (c)  -- [fermion, edge label'=\(e\)] (c1) -- [fermion] (ve),
+  (e) -- [fermion] (c) -- [fermion, edge label'=\(e\)] (c1)
+      -- [fermion] (ve),
 };
 \end{feynman}
 \end{tikzpicture}
 \end{minipage}
-%\caption{Some 1 loop diagrams in the full theory for the semi-leptonic decay.}
-\label{1loopdiag}
-\end{figure}
-
-
-\begin{figure}[h]
+\hfill
+%----------------------------------------------------
+% Diagram 3
+%----------------------------------------------------
+\begin{minipage}{0.23\textwidth}
 \centering
-\begin{minipage}[c]{0.45\textwidth}
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=0.65, transform shape]
 \begin{feynman}
 \vertex (u) at (0,1.5) {\(u\)};
 \vertex (a) at (1,1.5);
@@ -540,8 +570,12 @@ f\,
 \end{tikzpicture}
 \end{minipage}
 \hfill
-\begin{minipage}[c]{0.45\textwidth}
-\begin{tikzpicture}
+%----------------------------------------------------
+% Diagram 4
+%----------------------------------------------------
+\begin{minipage}{0.23\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.65, transform shape]
 \begin{feynman}
 \vertex (u) at (0,1.5) {\(u\)};
 \vertex (a) at (1.5,1.5);
@@ -563,49 +597,27 @@ f\,
 \end{feynman}
 \end{tikzpicture}
 \end{minipage}
-\caption{Some 1 loop diagrams in the full theory for the semi-leptonic decay.}
-\label{1loopdiag}
+
+\caption{\small Representative one-loop EW diagrams contributing to the semi-leptonic process.}
 \end{figure}
-\end{frame}
 
+\small
 
+Wilson Coefficients at NNLO
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{frame}{Normalization to $G_F$}
-Normalization to $G_F$
-\begin{equation}
-  \mathcal{L}_{G_F} = -\frac{G_F}{\sqrt{2}} Q_\mu -\frac{G_F}{\sqrt{2}} V_{ud} C_{q} Q_q
-\end{equation}
-
-And the Wilson Coefficients are
-
-\begin{align}
+\begin{align*}
   C_{r}^{{LO}}  = 1
-\end{align}
+\end{align*}
 
-\begin{equation}
-  C^{NLO}_r = -5 +\frac{a^1_\mu}{4}+\frac{a^1_q}{12} - 2\log\left( \frac{\mu^2}{M_Z^2} \right)\,.
-\end{equation}
+\begin{equation*}
+  C^{NLO}_r = -4 +\frac{2}{3} - 2\log\left( \frac{\mu^2}{M_Z^2} \right)\,.
+\end{equation*}
 
 \begin{itemize}
-    \item Finite, scheme dependent ($a_\mu^1$, $a_q^1$)
-    \item Only box diagrams contribute
+    \item Only box type diagrams contribute in the ratio.
 \end{itemize}
 \end{frame}
+
 
 
 
