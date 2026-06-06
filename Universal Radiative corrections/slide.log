@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.2.9)  6 JUN 2026 17:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.2.9)  6 JUN 2026 17:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2023,7 +2023,20 @@ distance' requires LuaTeX. It will be ignored. on input line 699.
 
 [14
 
- <./eft2l.png>] [15
+ <./eft2l.png>]
+<plotwc.png, id=494, 923.45pt x 464.73625pt>
+File: plotwc.png Graphic file (type png)
+<use plotwc.png>
+Package pdftex.def Info: plotwc.png  used on input line 714.
+(pdftex.def)             Requested size: 323.21234pt x 162.66011pt.
+
+Overfull \hbox (15.92247pt too wide) in paragraph at lines 714--714
+ [] 
+ []
+
+[15
+
+ <./plotwc.png>] [16
 
 ]
 No file slide.bbl.
@@ -2042,10 +2055,10 @@ Package rerunfilecheck Info: File `slide.out' has not changed.
 (rerunfilecheck)             Checksum: 3422154A2F4A80DE34E0395E350ABB30;1102.
  ) 
 Here is how much of TeX's memory you used:
- 32650 strings out of 480129
- 678844 string characters out of 5893410
- 1039985 words of memory out of 5000000
- 49843 multiletter control sequences out of 15000+600000
+ 32661 strings out of 480129
+ 678980 string characters out of 5893410
+ 1040020 words of memory out of 5000000
+ 49851 multiletter control sequences out of 15000+600000
  487551 words of font info for 85 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  128i,16n,122p,406b,2052s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2069,10 +2082,10 @@ r/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf/fonts/
 type1/public/cm-super/sfss1095.pfb></usr/share/texmf/fonts/type1/public/cm-supe
 r/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1440.pfb></usr
 /share/texmf/fonts/type1/public/cm-super/sfsx1095.pfb>
-Output written on slide.pdf (15 pages, 770914 bytes).
+Output written on slide.pdf (16 pages, 793909 bytes).
 PDF statistics:
- 624 PDF objects out of 1000 (max. 8388607)
- 517 compressed objects within 6 object streams
- 41 named destinations out of 1000 (max. 500000)
- 255 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 653 PDF objects out of 1000 (max. 8388607)
+ 543 compressed objects within 6 object streams
+ 43 named destinations out of 1000 (max. 500000)
+ 260 words of extra memory for PDF output out of 10000 (max. 10000000)
 
