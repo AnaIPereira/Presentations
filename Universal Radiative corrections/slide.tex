@@ -100,19 +100,18 @@ Determinations of $V_{ud}$}
 
 
 
-\begin{frame}
+\begin{frame}{ToDo}
 \begin{itemize}
 \item SM motivation - split theory and exp
 \item define acronims
 \item decays Kl3 - feyn diags as ex
 \item more info in plots context
 \item smoth doen transition to my computations
-\item move definition of EFT before pion and neutron
 \item explain the calculations that have been done by martin and francesno at NNLOQCD/EW
 \item talk about precision of Vud and is very precise with these new calculation but EW corrections can improve uncertainty which we are doing and use this to motivate our work
-\item take off 1 loop diagrams
 \item add tadpole box on 2 loop
 \item talk about tadpoles and how they contribute
+\item add references
 \end{itemize}
 \end{frame}
 
@@ -323,6 +322,50 @@ P=\pi^+,\,K^+.
 
 
 
+\section{EFT formalism}
+
+\begin{frame}{EFT formalism}
+
+\begin{equation*}
+    H_{eff}(x) = \dfrac{G_F}{\sqrt{2}} V_{CKM} C(\mu) Q(x)
+\end{equation*}
+
+\begin{figure}[H]
+\centering
+% ---- First Minipage ----
+\begin{minipage}[b]{0.4\linewidth}
+\centering
+\resizebox{0.6\linewidth}{!}{ % scale to 90% of minipage width
+\includegraphics[scale=.5]{full.png}
+}
+%\caption{SM tree-level.}
+\label{treelevelfull}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.4\linewidth}
+\centering
+%\vspace{.2cm}
+\resizebox{0.6\linewidth}{!}{ % scale to 90% of minipage width
+\includegraphics[scale=.5]{eft.png}
+}
+%\caption{EFT Tree-level.}
+\label{treeleveleft}
+\end{minipage}
+\end{figure}
+
+\begin{equation*}
+     \frac{1}{k^2-m_W^2} \longrightarrow \frac{-1}{m_W^2}
+\end{equation*}
+
+Quark decay normalized to $G_F$:
+\begin{equation*}
+  \mathcal{L}_{G_F} = -\frac{G_F}{\sqrt{2}} Q_\mu -\frac{G_F}{\sqrt{2}} V_{ud} C_{q} Q_q
+\end{equation*}
+
+
+\end{frame}
+
+
 
 
 
@@ -415,56 +458,6 @@ f\,
 
 
 
-
-
-
-
-
-\section{EFT formalism}
-
-\begin{frame}{EFT formalism}
-
-\begin{equation*}
-    H_{eff}(x) = \dfrac{G_F}{\sqrt{2}} V_{CKM} C(\mu) Q(x)
-\end{equation*}
-
-\begin{figure}[H]
-\centering
-
-% ---- First Minipage ----
-\begin{minipage}[b]{0.4\linewidth}
-\centering
-\vspace{.2cm}
-\resizebox{0.6\linewidth}{!}{ % scale to 90% of minipage width
-\includegraphics[scale=.5]{full.png}
-}
-%\vspace{.2cm}
-%\caption{SM tree-level.}
-\label{treelevelfull}
-\end{minipage}
-\hfill
-\begin{minipage}[b]{0.4\linewidth}
-\centering
-%\vspace{.2cm}
-\resizebox{0.6\linewidth}{!}{ % scale to 90% of minipage width
-\includegraphics[scale=.5]{eft.png}
-}
-%\caption{EFT Tree-level.}
-\label{treeleveleft}
-\end{minipage}
-\end{figure}
-
-\begin{equation*}
-     \frac{1}{k^2-m_W^2} \longrightarrow \frac{-1}{m_W^2}
-\end{equation*}
-
-Quark decay normalized to $G_F$:
-\begin{equation*}
-  \mathcal{L}_{G_F} = -\frac{G_F}{\sqrt{2}} Q_\mu -\frac{G_F}{\sqrt{2}} V_{ud} C_{q} Q_q
-\end{equation*}
-
-
-\end{frame}
 
 
 
