@@ -318,15 +318,6 @@ P=\pi^+,\,K^+ .
 \item Isospin-breaking effects are relevant at current CKM precision.
 \end{itemize}
 
-\vspace{0.2cm}
-
-\[
-\left|\frac{V_{us}}{V_{ud}}\right|
-\frac{f_{K^\pm}}{f_{\pi^\pm}}
-=
-0.27599(41)
-\qquad (\mathrm{experiment})
-\]
 
 \end{frame}
 
@@ -472,89 +463,87 @@ Q_q
 
 
 
+\section{$V_{ud}$ from neutron decay}
 
+\begin{frame}{$V_{ud}$ from neutron decay}
 
-\section{$V_{ud}$ from pion decay}
-\begin{frame}{$V_{ud}$ from pion decay}
-Cirigliano,Hoferichter,Valori (2602.11253)
-
-\begin{equation*}
-\Gamma_{\pi\beta}
+\[
+\frac{1}{\tau_n}
 =
-\frac{G_F^2 |V_{ud}|^2 M_{\pi}^{5}}
-     {64\pi^{3}}
-\,|g_V^\pi|^{2}
-\,|f_{+}^{\pi}(0)|^{2}
-\,I_{\pi\ell}
-\left(1+\Delta I_{\pi\ell}\right)
-\end{equation*}
+\frac{G_F^2 |V_{ud}|^2}{2\pi^3}
+m_e^5 f (1+3g_A^2)(1+\Delta_R^V)
+\]
 
 \begin{itemize}
-    \item $f_{+}^{\pi}(0)$: pion vector form factor.
-    \item $I_{\pi\ell}$: phase-space integral.
-    \item $\Delta_{\mathrm{RC}}^{\pi\ell}$: radiative corrections.
-    \item $g_{V}^{\pi}$: effective vector coupling containing the short-distance electroweak corrections.
+    \item $f$ phase-space factor
+    \item $g_A$ axial coupling
+    \item $\Delta_R^V$ universal electroweak radiative correction.
 \end{itemize}
+
 \[
-\Delta_{\mathrm{RC}}^{\pi\ell}
+\Delta_R^V = 2.436(16)\%
+\]
+
+\[
+|V_{ud}|_n = 0.97410(41)
+\]
+
+\begin{itemize}
+    \item First NLL calculation of mixed $O(\alpha\alpha_s^2)$ corrections;
+    \item Reduced scale and scheme dependence;
+    \item Improved CKM first-row unitarity tests;
+\end{itemize}
+{\footnotesize
+Gorbahn, Jäger, Moretti (2025)
+}
+\end{frame}
+
+
+
+
+
+
+
+
+
+\section{$V_{ud}$ from pion $\beta$ decay}
+
+\begin{frame}{$V_{ud}$ from pion $\beta$ decay}
+
+\[
+\Gamma_{\pi\beta}
 =
-0.03403(11)
+\frac{G_F^2 |V_{ud}|^2 M_\pi^5}
+     {64\pi^3}
+|f_+^\pi(0)|^2
+I_{\pi\ell}
+(1+\Delta_{RC}^{\pi\ell})
+\]
+
+\begin{itemize}
+    \item $f_+^\pi(0)$ pion vector form factor
+    \item $I_{\pi\ell}$ phase-space integral
+    \item $\Delta_{RC}^{\pi\ell}$ electroweak radiative correction (short distance and long distance)
+\end{itemize}
+
+\[
+\Delta_{RC}^{\pi\ell}=0.03403(11)
 \]
 
 \[
 V_{ud}^{\pi}=0.97346(283)
 \]
+
 \begin{itemize}
-    \item The Behrends--Sirlin--Ademollo--Gatto theorem implies
-    \[
-    f_+^\pi(0)\simeq 1-7\times10^{-6},
-    \]
-    making isospin-breaking corrections negligible.
+    \item NLL matching of LEFT and ChPT
+    %\item Uses lattice-QCD input for the $\gamma W$ box
+    \item Theory uncertainty reduced by a factor $\sim 3$ (preparing theory for PIONEER)
 \end{itemize}
+
+{\footnotesize
+Cirigliano, Hoferichter, Valori (2026)
+}
 \end{frame}
-
-
-
-
-
-
-
-
-
-\section{$V_{ud}$ from neutron decay}
-
-\begin{frame}{$V_{ud}$ from neutron decay}
-
-\begin{equation}
-\frac{1}{\tau_n}
-=
-\frac{G_F^2 |V_{ud}|^2}{2\pi^3}
-\,m_e^5\,
-f\,
-(1+3g_A^2)\,
-(1+\Delta_R),
-\end{equation}
-
-\begin{itemize}
-    \item $f$: phase-space factor.
-    \item $g_A$: axial-vector coupling.
-    \item $\Delta_R$: electroweak radiative corrections.
-\end{itemize}
-
-\begin{align*}
-\Delta_R^V &= 2.436(16)\%,\\
-|V_{ud}|_n &= 0.97410(41).
-\end{align*}
-
-\begin{itemize}
-    \item First NLL calculation of mixed $O(\alpha\alpha_s^2)$ corrections.
-    \item Reduces theoretical uncertainty in $\Delta_R^V$.
-    \item Improves consistency of first-row CKM unitarity tests.
-\end{itemize}
-
-\end{frame}
-
-
 
 
 
@@ -749,7 +738,7 @@ C_q^{\rm NLO}
 
 
 \section{NNLO EW corrections}
-\begin{frame}
+\begin{frame}{NNLO EW corrections}
 \begin{figure}
 \includegraphics[scale=.13]{eft2l.png}
 \scriptsize
@@ -759,39 +748,37 @@ EFT NNLO EW corrections.
 \centering
 
 %---------------- First row ----------------
-\begin{minipage}{0.15\textwidth}
+\begin{minipage}{0.16\textwidth}
 \centering
 \includegraphics[width=\linewidth]{bb1.png}
 \end{minipage}
 \hfill
-\begin{minipage}{0.15\textwidth}
+\begin{minipage}{0.16\textwidth}
 \centering
 \includegraphics[width=\linewidth]{bb2.png}
 \end{minipage}
 \hfill
-\begin{minipage}{0.15\textwidth}
+\begin{minipage}{0.16\textwidth}
 \centering
 \includegraphics[width=\linewidth]{bb3.png}
 \end{minipage}
 \hfill
-\begin{minipage}{0.15\textwidth}
+\begin{minipage}{0.16\textwidth}
 \centering
 \includegraphics[width=\linewidth]{p1.png}
 \end{minipage}
 \hfill
-\begin{minipage}{0.15\textwidth}
+\begin{minipage}{0.16\textwidth}
 \centering
 \includegraphics[width=\linewidth]{p2.png}
 \end{minipage}
-
-\vspace{0.5cm}
 
 \scriptsize
 SM NNLO EW corrections.
 \end{figure}
 \begin{itemize}
 \item NNLO requires inclusion of boxes and penguins
-\item Tadpoles are included in the matching: gauge independent NNLO EW corrections and potentially substancial contribution in scheme conversion: $\bar{MS}$ to On-Shell.
+\item Tadpoles are included in the matching: gauge independent NNLO EW corrections and potentially substancial contribution in scheme conversion: $\overline{MS}$ to On-Shell.
 \end{itemize}
 \end{frame}
 
