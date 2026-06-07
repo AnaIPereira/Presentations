@@ -100,26 +100,6 @@ Determinations of $V_{ud}$}
 
 
 
-\begin{frame}{ToDo}
-\begin{itemize}
-\item define acronims
-\item more info in plots context
-\item smoth doen transition to my computations
-\item explain the calculations that have been done by martin and francesno at NNLOQCD/EW
-\item talk about precision of Vud and is very precise with these new calculation but EW corrections can improve uncertainty which we are doing and use this to motivate our work
-\item add tadpole box on 2 loop
-\item talk about tadpoles and how they contribute
-\item add references
-\end{itemize}
-\end{frame}
-
-
-
-
-
-
-
-
 
 
 
@@ -176,7 +156,7 @@ are needed to clarify this tension;
 
 \centering
 \footnotesize
-$V_{ud}$ and $V_{us}$ using lattice QCD input and $V_{ud}$ extracted from nuclear $\beta$ decays.
+$V_{ud}$ and $V_{us}$ using lattice QCD input and $V_{ud}$ extracted from nuclear $\beta$ decays, FLAG2024.
 \end{frame}
 
 
@@ -192,6 +172,8 @@ $V_{ud}$ and $V_{us}$ using lattice QCD input and $V_{ud}$ extracted from nuclea
 \section{$V_{us}$ from kaon decays}
 
 \begin{frame}{ $V_{us}$ from $K_{l3}$}
+FLAG2024, Seng(2502.04721)
+\\
 \textbf{$K_{\ell3}$ decays:}
 \[
 K \to \pi \ell \nu_\ell,
@@ -423,7 +405,7 @@ Black squares and grey bands denote FLAG averages.
 
 
 
-\section{$V_{ud}$ EFT approach}
+\section{$V_{ud}$ EFT framework}
 
 \begin{frame}{$V_{ud}$ in the EFT framework}
 
@@ -493,8 +475,9 @@ Q_q
 
 
 \section{$V_{ud}$ from pion decay}
-
 \begin{frame}{$V_{ud}$ from pion decay}
+Cirigliano,Hoferichter,Valori (2602.11253)
+
 \begin{equation*}
 \Gamma_{\pi\beta}
 =
@@ -758,27 +741,58 @@ C_q^{\rm NLO}
 
 
 
-\begin{frame}{Wilson-Coefficient Evolution}
 
-\centering
-\includegraphics[scale=.8]{Cqu_at_2GeV_NLO.pdf}
 
-\vspace{0.2cm}
+
+
+
+
+
+\section{NNLO EW corrections}
+\begin{frame}
+\begin{figure}
+\includegraphics[scale=.13]{eft2l.png}
 \scriptsize
-Scale dependence of the Wilson coefficient $C(2\,\mathrm{GeV})$ at NLO.
+EFT NNLO EW corrections.
+\end{figure}
+\begin{figure}
+\centering
 
-\vspace{0.4cm}
+%---------------- First row ----------------
+\begin{minipage}{0.15\textwidth}
+\centering
+\includegraphics[width=\linewidth]{bb1.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.15\textwidth}
+\centering
+\includegraphics[width=\linewidth]{bb2.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.15\textwidth}
+\centering
+\includegraphics[width=\linewidth]{bb3.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.15\textwidth}
+\centering
+\includegraphics[width=\linewidth]{p1.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.15\textwidth}
+\centering
+\includegraphics[width=\linewidth]{p2.png}
+\end{minipage}
 
+\vspace{0.5cm}
+
+\scriptsize
+SM NNLO EW corrections.
+\end{figure}
 \begin{itemize}
-\item Residual scale dependence at NLO induces an uncertainty
-$\delta C(2\,\mathrm{GeV}) \simeq \pm 2\times10^{-4}$,
-which is significant for precision determinations of $V_{ud}$.
-
-\item NNLO corrections reduce the uncertainty to
-$\delta C(2\,\mathrm{GeV}) < 2\times10^{-5}$,
-making perturbative uncertainties essentially negligible.
+\item NNLO requires inclusion of boxes and penguins
+\item Tadpoles are included in the matching: gauge independent NNLO EW corrections and potentially substancial contribution in scheme conversion: $\bar{MS}$ to On-Shell.
 \end{itemize}
-
 \end{frame}
 
 
@@ -789,9 +803,7 @@ making perturbative uncertainties essentially negligible.
 
 
 
-
-\section{NNLO EW corrections}
-
+\begin{comment}
 
 \begin{frame}
 \begin{figure}
@@ -863,6 +875,7 @@ making perturbative uncertainties essentially negligible.
 \caption{SM NNLO EW corrections.}
 \end{figure}
 \end{frame}
+\end{comment}
 
 
 
@@ -870,6 +883,30 @@ making perturbative uncertainties essentially negligible.
 
 
 
+
+
+\begin{frame}{Wilson-Coefficient Evolution}
+
+\centering
+\includegraphics[scale=.8]{Cqu_at_2GeV_NLO.pdf}
+
+\vspace{0.2cm}
+\scriptsize
+Scale dependence of the Wilson coefficient $C(2\,\mathrm{GeV})$ at NLO.
+
+\vspace{0.4cm}
+
+\begin{itemize}
+\item Residual scale dependence at NLO induces an uncertainty
+$\delta C(2\,\mathrm{GeV}) \simeq \pm 2\times10^{-4}$,
+which is significant for precision determinations of $V_{ud}$.
+
+\item NNLO corrections reduce the uncertainty to
+$\delta C(2\,\mathrm{GeV}) < 2\times10^{-5}$,
+making perturbative uncertainties essentially negligible.
+\end{itemize}
+
+\end{frame}
 
 
 
