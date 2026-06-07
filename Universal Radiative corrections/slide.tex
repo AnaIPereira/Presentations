@@ -584,13 +584,17 @@ f\,
 
 
 
-
-
-
 \section{NLO EW corrections}
 
 
 \begin{frame}{NLO EW corrections}
+
+\textbf{Matching condition}
+\[
+\mathcal A_{\rm SM}
+=
+\mathcal A_{\rm EFT} = V_{ud} C_q Q_q
+\]
 
 \begin{figure}
 \centering
@@ -701,25 +705,51 @@ f\,
 \end{feynman}
 \end{tikzpicture}
 \end{minipage}
-
-\caption{\small Representative one-loop EW diagrams contributing to the semi-leptonic process.}
+\scriptsize Representative one-loop EW diagrams contributing to the semi-leptonic process.
 \end{figure}
 
 \small
 
-Wilson Coefficients at NNLO
+\begin{columns}[c]
 
-\begin{align*}
-  C_{r}^{{LO}}  = 1
-\end{align*}
+\begin{column}{0.48\textwidth}
 
-\begin{equation*}
-  C^{NLO}_r = -4 +\frac{2}{3} - 2\log\left( \frac{\mu^2}{M_Z^2} \right)\,.
-\end{equation*}
+\textbf{Wilson coefficient}
+
+\[
+C_q(\mu)
+=
+1+
+\frac{\alpha}{4\pi}
+\,C_q^{\rm NLO}
++
+(\frac{\alpha}{4\pi})^{2}
+\,C_q^{\rm NNLO}
+\]
+
+\[
+C_q^{\rm NLO}
+=
+-\frac{10}{3}
+-
+2\ln\!\left(\frac{\mu^2}{M_Z^2}\right)
+\]
+
+\end{column}
+
+\begin{column}{0.48\textwidth}
 
 \begin{itemize}
-    \item Only box type diagrams contribute in the ratio.
+\item Matching performed at the electroweak scale.
+
+\item Universal corrections cancel in the ratio of the quark decay normalized to muon decay: $\frac{C_q}{C_\mu}.$
+
+\item Only box-diagram contributions survive.
 \end{itemize}
+
+\end{column}
+
+\end{columns}
 \end{frame}
 
 
