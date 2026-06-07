@@ -123,19 +123,6 @@ Determinations of $V_{ud}$}
 
 
 
-\begin{comment}
-\begin{frame}{Motivation and Overview}
-\begin{itemize}
-\item CKM (mixing of quark flavour eigenstates)
-\item Cabbibo angle anomaly;
-\item Measure decay rates: $K$, $0^+ \longrightarrow 0^+$, $\Pi$, neutron decay;
-\item $K_{l3}$, $0^+ \longrightarrow 0^+$, neutron decay (SL) and $K_{l2}$ (L);
-\item Status of $V_{us}:$ Kaon decays and status of $V_{ud}:$ superallowed $\beta$ decays, neutron decay, pion decays;
-\end{itemize}
-
-\end{frame}
-\end{comment}
-
 
 \begin{frame}{Motivation and Overview}
 
@@ -204,15 +191,11 @@ $V_{ud}$ and $V_{us}$ using lattice QCD input and $V_{ud}$ extracted from nuclea
 
 \section{$V_{us}$ from kaon decays}
 
-\begin{frame}{ $V_{us}$ from $K_{l3}$ - Semi-leptonic kaon decays}
+\begin{frame}{ $V_{us}$ from $K_{l3}$}
 \textbf{$K_{\ell3}$ decays:}
 \[
 K \to \pi \ell \nu_\ell,
 \qquad \ell=e,\mu,
-\]
-mediated by the weak transition
-\[
-s \to u\,\ell\,\bar{\nu}_\ell.
 \]
 \begin{equation*}
 \Gamma\!\left(K_{\ell3}\right)
@@ -229,10 +212,10 @@ I_{K\ell}^{(0)}
 \right)^2 
 \end{equation*}
 \begin{itemize}
-\item $S_{EW} = 1.0232(3) \longrightarrow$ process indepented EW corrections;
-\item $I_{K\ell}^{(0)}$ phase space in isospin limit;
-\item $\delta_{SU(2)}^{K\pi}$ strong isospin breakig correction
-\item $\delta_{\mathrm{EM}}^{K\ell}$ long distance EW corrections
+\item $S_{\rm EW}=1.0232(3)$: process-independent electroweak correction;
+\item $I_{K\ell}^{(0)}$: phase-space integral in the isospin limit;
+\item $\delta_{SU(2)}^{K\pi}$: strong isospin-breaking correction;
+\item $\delta_{\rm EM}^{K\ell}$: long-distance electromagnetic correction.
 \end{itemize}
 \begin{equation*}
 \langle \pi(p_{\pi})|\bar{s}\gamma^{\mu}u|K(p_{K})\rangle
@@ -241,13 +224,13 @@ I_{K\ell}^{(0)}
 +
 (p_{K}-p_{\pi})^{\mu} f_{-}(q^{2}),
 \end{equation*}
-\textbf{Experimental inputs}
-\[
-|V_{us}|\,f_+(0)=0.21654(41)
-\]
+\small
+\textbf{Experimental input:} $|V_{us}|\,f_+(0)$
+
+
+\textbf{Hadronic input:} $f_+(0)$ from the vector form factor $\langle \pi|\bar s \gamma^\mu u|K\rangle$
 
 \end{frame}
-
 
 
 
@@ -270,19 +253,32 @@ I_{K\ell}^{(0)}
 
 \vspace{0.2cm}
 \scriptsize
-Lattice results (squares and empty circles) for $f_+(0)$ and ChPT estimates (filled blue circles). The black squares and grey bands indicate averages.
+Lattice determinations of $f_+(0)$.
+Black squares and grey bands denote FLAG averages.
 \end{column}
 
 \begin{column}{0.42\textwidth}
+
+\textbf{Experimental input:}
+\[
+|V_{us}|f_+(0)=0.21654(41)
+\]
+
+\textbf{FLAG average:}
 \[
 f_+(0)=0.9698(17)
 \]
 
-\vspace{0.5cm}
+\vspace{0.2cm}
 
 \[
-|V_{us}| = 0.22328(58)
-\qquad (K_{\ell3})
+\Downarrow
+\]
+
+\vspace{0.2cm}
+
+\[
+|V_{us}|=0.22328(58)
 \]
 \end{column}
 
@@ -301,10 +297,16 @@ f_+(0)=0.9698(17)
 
 
 
-\section{Ratio of $V_{us}/V_{ud}$}
+
+
+
 
 \begin{frame}{Ratio of $V_{us}/V_{ud}$}
-\centering
+
+\[
+K_{\mu2(\gamma)}:\qquad K^+ \to \mu^+ \nu_\mu (\gamma)
+\]
+
 \begin{equation*}
 \frac{\Gamma(K^\pm_{\mu2(\gamma)})}
      {\Gamma(\pi^\pm_{\mu2(\gamma)})}
@@ -315,29 +317,35 @@ f_+(0)=0.9698(17)
      {M_{\pi^\pm}\left(1-m_\mu^2/M_{\pi^\pm}^2\right)^2}
 \left(1+\delta_{\rm EM}\right)
 \end{equation*}
+
+\vspace{0.2cm}
+
 \begin{equation*}
 \langle 0|\bar{q}_1\gamma^{\mu}\gamma_{5}q_2|P(p)\rangle
 =
 i\,p^{\mu}f_P,
 \qquad
-P=\pi^+,\,K^+.
+P=\pi^+,\,K^+ .
 \end{equation*}
+
 \begin{itemize}
-\item Average of $f_K/f_pi$ in isosymmetric QCD;
+\item Hadronic input encoded in the decay-constant ratio
+      $f_{K^\pm}/f_{\pi^\pm}$;
+\item $\delta_{\rm EM}$: electromagnetic radiative correction;
+\item Lattice-QCD isospin corrections are systematically improvable;
+\item Isospin-breaking effects are relevant at current CKM precision.
 \end{itemize}
 
-\textbf{Experimental inputs}
+\vspace{0.2cm}
+
 \[
 \left|\frac{V_{us}}{V_{ud}}\right|
 \frac{f_{K^\pm}}{f_{\pi^\pm}}
 =
 0.27599(41)
+\qquad (\mathrm{experiment})
 \]
 
-\begin{itemize}
-\item Isospin correction from the lattice can be improved by higher statistics in contrast with extractions from ChPT;
-\item Isopsin corrections are becoming relevant for CKM elements extraction at the current level of precision of lattice inputs;
-\end{itemize}
 \end{frame}
 
 
@@ -347,14 +355,7 @@ P=\pi^+,\,K^+.
 
 
 
-
-
-
-
-
-
-
-\begin{frame}{Lattice input for $f_K/f_\pi$}
+\begin{frame}{Lattice determination of $f_{K^\pm}/f_{\pi^\pm}$}
 
 \begin{columns}[c]
 
@@ -363,29 +364,38 @@ P=\pi^+,\,K^+.
 \includegraphics[width=\textwidth]{flag.png}
 
 \vspace{0.2cm}
+
 \scriptsize
-Lattice results for $f_K/f_\pi$ in pure QCD including
-isospin-breaking corrections. Black squares and grey bands indicate averages.
+Lattice determinations of $f_{K^\pm}/f_{\pi^\pm}$.
+Black squares and grey bands denote FLAG averages.
+
 \end{column}
 
 \begin{column}{0.42\textwidth}
 
 \small
 
+\textbf{Experimental input:}
 \[
-|V_{ud}|=0.97373(31)
-\]
-
-\[
-(\text{superallowed }\beta\text{ decays})
+\left|\frac{V_{us}}{V_{ud}}\right|
+\frac{f_{K^\pm}}{f_{\pi^\pm}}
+=
+0.27599(41)
 \]
 
 \vspace{0.3cm}
 
-
-FLAG average:
+\textbf{FLAG average:}
 \[
-\frac{f_{K^\pm}}{f_{\pi^\pm}}=1.1934(19)
+\frac{f_{K^\pm}}{f_{\pi^\pm}}
+=
+1.1934(19)
+\]
+
+\vspace{0.3cm}
+
+\[
+\Downarrow
 \]
 
 \vspace{0.3cm}
@@ -413,54 +423,66 @@ FLAG average:
 
 
 
+\section{$V_{ud}$ EFT approach}
 
+\begin{frame}{$V_{ud}$ in the EFT framework}
 
-\section{EFT formalism}
+\[
+d \to u\,e\,\bar\nu_e
+\]
 
-\begin{frame}{EFT formalism}
+\begin{columns}[c]
 
-\begin{equation*}
-    H_{eff}(x) = \dfrac{G_F}{\sqrt{2}} V_{CKM} C(\mu) Q(x)
-\end{equation*}
-
-\begin{figure}[H]
+\begin{column}{0.45\textwidth}
 \centering
-% ---- First Minipage ----
-\begin{minipage}[b]{0.4\linewidth}
+\includegraphics[width=0.8\textwidth]{full.png}
+
+\vspace{0.2cm}
+{\small Standard Model}
+\end{column}
+
+\begin{column}{0.1\textwidth}
 \centering
-\resizebox{0.6\linewidth}{!}{ % scale to 90% of minipage width
-\includegraphics[scale=.5]{full.png}
-}
-%\caption{SM tree-level.}
-\label{treelevelfull}
-\end{minipage}
-\hfill
-\begin{minipage}[b]{0.4\linewidth}
+\[
+m_W \gg k
+\]
+
+\[
+\Longrightarrow
+\]
+\end{column}
+
+\begin{column}{0.45\textwidth}
 \centering
-%\vspace{.2cm}
-\resizebox{0.6\linewidth}{!}{ % scale to 90% of minipage width
-\includegraphics[scale=.5]{eft.png}
-}
-%\caption{EFT Tree-level.}
-\label{treeleveleft}
-\end{minipage}
-\end{figure}
+\includegraphics[width=0.8\textwidth]{eft.png}
 
-\begin{equation*}
-     \frac{1}{k^2-m_W^2} \longrightarrow \frac{-1}{m_W^2}
-\end{equation*}
+\vspace{0.2cm}
+{\small Effective theory}
+\end{column}
 
-Quark decay normalized to $G_F$:
-\begin{equation*}
-  \mathcal{L}_{G_F} = -\frac{G_F}{\sqrt{2}} Q_\mu -\frac{G_F}{\sqrt{2}} V_{ud} C_{q} Q_q
-\end{equation*}
+\end{columns}
 
+%\vspace{0.3cm}
+
+%\[
+%\frac{1}{k^2-m_W^2}
+%=
+%-\frac{1}{m_W^2}
+%+\mathcal O\!\left(\frac{k^2}{m_W^4}\right)
+%\]
+
+\vspace{0.2cm}
+
+\[
+\mathcal H_{\rm eff}
+=
+\frac{G_F}{\sqrt2}
+V_{ud}\,
+C_q(\mu)\,
+Q_q
+\]
 
 \end{frame}
-
-
-
-
 
 
 
@@ -548,10 +570,6 @@ f\,
 \end{itemize}
 
 \end{frame}
-
-
-
-
 
 
 
@@ -710,6 +728,31 @@ Wilson Coefficients at NNLO
 
 
 
+\begin{frame}{Wilson-Coefficient Evolution}
+
+\centering
+\includegraphics[scale=.8]{Cqu_at_2GeV_NLO.pdf}
+
+\vspace{0.2cm}
+\scriptsize
+Scale dependence of the Wilson coefficient $C(2\,\mathrm{GeV})$ at NLO.
+
+\vspace{0.4cm}
+
+\begin{itemize}
+\item Residual scale dependence at NLO induces an uncertainty
+$\delta C(2\,\mathrm{GeV}) \simeq \pm 2\times10^{-4}$,
+which is significant for precision determinations of $V_{ud}$.
+
+\item NNLO corrections reduce the uncertainty to
+$\delta C(2\,\mathrm{GeV}) < 2\times10^{-5}$,
+making perturbative uncertainties essentially negligible.
+\end{itemize}
+
+\end{frame}
+
+
+
 
 
 
@@ -793,18 +836,6 @@ Wilson Coefficients at NNLO
 
 
 
-
-
-
-
-
-\begin{frame}{WC Evolution}
-\begin{figure}
-    \centering
-    \includegraphics[scale=.35]{plotwc.png}
-    \caption{Evolution of the NLO WC with the scale $\mu$.}
-\end{figure}
-\end{frame}
 
 
 
