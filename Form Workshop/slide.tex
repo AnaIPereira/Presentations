@@ -76,10 +76,6 @@
     \begin{figure}[htpb]
         \begin{center}
            \includegraphics[width=0.35\linewidth]{logo.png}
-        \end{center}
-    \end{figure}
-        \begin{figure}[htpb]
-        \begin{center}
            \includegraphics[width=0.35\linewidth]{logo_livinno.jpg}
         \end{center}
     \end{figure}
@@ -95,10 +91,7 @@
 
 
 
-
-
-
-\section{Parallel scalings}
+\begin{comment}
 
 \begin{frame}
 \begin{itemize}
@@ -106,17 +99,26 @@
 \end{itemize}
 \end{frame}
 
+\end{comment}
 
 
 
 
 
-\begin{frame}
-\begin{figure}
-\includegraphics[scale=.35]{images/sortbot.png}
-\end{figure}
+
+
+
+
+
+\begin{frame}{Introduction}
 \begin{itemize}
-\item Running in parallel: Sortbots send terms between each other and to the master
+\item Parallel scalings: study of scaling at higher thread number of tform;
+\end{itemize}
+\textbf{Outline of talk}
+\begin{itemize}
+\item Overview of sorting process in parallel;
+\item Benchmarks performenca at different thread count;
+\item Changes implemented in sorting of terms;
 \end{itemize}
 \end{frame}
 
@@ -125,14 +127,122 @@
 
 
 
+
+
+
+
+
+\section{Parallel scalings}
+
+\begin{frame}{Parallel Sorting in TForm}
+\begin{figure}
+\includegraphics[scale=.35]{images/sortbot.png}
+\end{figure}
+\begin{itemize}
+\item Master makes the allocations for the workers;
+\item For each $N$ workers, $N-2$ SB are created; 
+\end{itemize}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{frame}{Parallel Sorting in TForm}
+
+\begin{itemize}
+    \item Each worker performs a local sort of its generated terms.
+    \item Workers produce independent sorted streams.
+    \item Sortbots merge pairs of sorted outputs in parallel.
+    \item The master performs only the final merge and writes output.
+    \item Goal: reduce master-thread bottlenecks and maximize worker utilization.
+\end{itemize}
+
+\end{frame}
+
+
+
+
+
+
+
+
+
+\begin{frame}{Sorting Resources}
+
+\vspace{0.5cm}
+
+\begin{itemize}
+	\item Memory is shared globally between all threads;
+	\item Avoid overwritting: each thread makes a private copy od the date: allocation of 1/N of the master's buffer size
+    \item Fast in-memory sorting starts in the buffers.
+    \item When buffers fill up, data is spilled to disk.
+\end{itemize}
+
+\end{frame}
+
+
+
+
+
+
+
+
 \begin{frame}
-Working of the code:
+\textbf{Working of the code:}
 \begin{itemize}
 \item Terms are allowed to overlap between blocks;
 \item Reading thread always locks pair of locks - the current thread and the previous thread;
 \item 0th block - the overlap in the end of term is copied to 0th so that the terms are contiguous - this is no longer needed when we impose that only full terms can fit into the blocks
 \end{itemize}
 \end{frame}
+
+
+
+
+
+
+\begin{frame}{Parallel Block Processing \& Overlap Strategy}
+    \textbf{Data Fragmentation Strategy:}
+    \begin{itemize}
+        \item \textbf{Overlapping Blocks:} Raw data streams permit terms to cross block boundaries to maximize ingestion speed.
+        \item \textbf{Optimization (Structural Change):} Realizing terms can overlap requires complex boundary tracking. The modern code enforces that \textit{only complete terms} sit inside blocks—rendering historical 0th-block stitching obsolete.
+    \end{itemize}
+
+    \vspace{0.3cm}
+    \textbf{The "Chained" Locking Mechanism:}
+    \begin{itemize}
+        \item Threads process blocks sequentially but execute in parallel.
+        \item To safely read an overlap boundary, the reading thread must employ a \textbf{Hand-over-Hand (Sliding Window)} lock.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Visualizing Lock \& Release (Hand-over-Hand)}
+    \begin{center}
+    \small
+    \begin{tabular}{rcccl}
+        \textbf{Step 1:} & Thread $N$ starts $\rightarrow$ & \color{red}[Lock Thread $N-1$] & \color{red}[Lock Thread $N$] & \textit{(Secures boundary)} \\
+        \textbf{Step 2:} & \multicolumn{4}{l}{Thread $N$ safely reads data block and overlapping boundary.} \\
+        \textbf{Step 3:} & Thread $N$ finishes $\rightarrow$ & \color{blue}[Release Thread $N-1$] & \color{blue}[Release Thread $N$] & \textit{(Frees next thread)} \\
+    \end{tabular}
+    \end{center}
+
+    \vspace{0.4cm}
+    \textbf{Why this design works:}
+    \begin{itemize}
+        \item \textbf{No Race Conditions:} Thread $N-1$ cannot destroy or alter its trailing boundary data while Thread $N$ is reading it.
+        \item \textbf{Prevents Deadlocks:} Because threads always acquire locks in strict chronological order ($N-1$ then $N$), a deadlock loop is mathematically impossible.
+    \end{itemize}
+\end{frame}
+
+
 
 
 
@@ -157,6 +267,11 @@ Before changes
 
 
 
+
+
+
+
+
 \begin{frame}
 After changes
 \begin{itemize}
@@ -172,11 +287,23 @@ After changes
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{frame}
 Some results after the changes
 \begin{itemize}
-\item There is no decrease in performance for any tests
-\item There is a performance imrovement for benchmarks where term merging is expensive (PolyRatFun, PolyRatFunExpand)
+\item No decrease in performance for any tests;
+\item Performance improvement for benchmarks where term merging is expensive (PolyRatFun, PolyRatFunExpand)
 \item Forcer, mbox1l
 \end{itemize}
 \end{frame}
@@ -185,7 +312,23 @@ Some results after the changes
 
 
 
-\section{SortBotMerge}
+
+
+
+
+
+
+
+
+
+
+
+
+%\section{Adition of new SortBot}
+
+
+\begin{comment}
+
 
 \begin{frame}
 \begin{itemize}
@@ -194,16 +337,6 @@ Some results after the changes
 \item Show results for different tests - improvements in scaling - plots and also profiler screenchots for the tests that are most affected
 \end{itemize}
 \end{frame}
-
-
-
-
-
-
-
-
-
-\section{Adition of new SortBot}
 
 \begin{frame}
 \begin{itemize}
@@ -215,6 +348,8 @@ Some results after the changes
 \item add some results from running this in higher number of threads
 \end{itemize}
 \end{frame}
+
+\end{comment}
 
 
 
