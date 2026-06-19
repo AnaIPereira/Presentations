@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{FORM}{3}{0}{1}
+\beamer@sectionintoc {2}{Sources}{4}{0}{2}
+\beamer@sectionintoc {3}{Layout}{5}{0}{3}
+\beamer@sectionintoc {4}{Expressions and terms}{6}{0}{4}
+\beamer@sectionintoc {5}{Sorting}{7}{0}{5}
+\beamer@sectionintoc {6}{TFORM}{14}{0}{6}

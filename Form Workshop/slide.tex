@@ -91,17 +91,6 @@
 
 
 
-\begin{comment}
-
-\begin{frame}
-\begin{itemize}
-\item Parallel scalings: scaling of the tests before the changes at different thread count, screenshots of the distribution of work between main thread and working threads from profiler, comment on performance of different tests
-\end{itemize}
-\end{frame}
-
-\end{comment}
-
-
 
 
 
@@ -116,9 +105,9 @@
 \end{itemize}
 \textbf{Outline of talk}
 \begin{itemize}
-\item Overview of sorting process in parallel;
-\item Benchmarks performenca at different thread count;
-\item Changes implemented in sorting of terms;
+\item Overview of sorting process in parallel at the \textcolor{blue}{SortBot} level;
+\item Benchmarks performence at different thread count;
+\item Changes implemented at the level of \textcolor{blue}{SortBots} and new benchmark results;
 \end{itemize}
 \end{frame}
 
@@ -132,15 +121,25 @@
 
 
 
-\section{Parallel scalings}
 
-\begin{frame}{Parallel Sorting in TForm}
+
+
+\section{SortBot Merging}
+
+
+\begin{frame}{SortBot Merging}
+\small
+\begin{itemize}
+\item \textcolor{magenta}{Master} $\longrightarrow$ allocations for the workers;
+\item \textcolor{orange}{Worker} $\longrightarrow$ independent stream of sorted terms (identical terms live consecutively in memory);
+\item  $N$ \textcolor{orange}{workers} $\longrightarrow$ $N-2$ \textcolor{blue}{SortBots} are created; 
+\item \textcolor{blue}{SortBots} routine starts; 
+\end{itemize}
 \begin{figure}
-\includegraphics[scale=.35]{images/sortbot.png}
+\includegraphics[scale=.20]{images/sb.png}
 \end{figure}
 \begin{itemize}
-\item Master makes the allocations for the workers;
-\item For each $N$ workers, $N-2$ SB are created; 
+    \item \textcolor{magenta}{Master} performs the final merge and writes output.
 \end{itemize}
 \end{frame}
 
@@ -155,74 +154,25 @@
 
 
 
-\begin{frame}{Parallel Sorting in TForm}
 
+
+\section{SortBot Bottlenecks and changes}
+
+\begin{frame}{SortBot: Overlaping of terms}
 \begin{itemize}
-    \item Each worker performs a local sort of its generated terms.
-    \item Workers produce independent sorted streams.
-    \item Sortbots merge pairs of sorted outputs in parallel.
-    \item The master performs only the final merge and writes output.
-    \item Goal: reduce master-thread bottlenecks and maximize worker utilization.
+\item \textcolor{blue}{SortBot} $\longrightarrow$ blocks;
 \end{itemize}
-
-\end{frame}
-
-
-
-
-
-
-
-
-
-\begin{frame}{Sorting Resources}
-
-\vspace{0.5cm}
-
-\begin{itemize}
-	\item Memory is shared globally between all threads;
-	\item Avoid overwritting: each thread makes a private copy od the date: allocation of 1/N of the master's buffer size
-    \item Fast in-memory sorting starts in the buffers.
-    \item When buffers fill up, data is spilled to disk.
-\end{itemize}
-
-\end{frame}
-
-
-
-
-
-
-
-
-\begin{frame}
-\textbf{Working of the code:}
+\begin{figure}
+\includegraphics[scale=.50]{images/sb5.png}
+\end{figure}
 \begin{itemize}
 \item Terms are allowed to overlap between blocks;
-\item Reading thread always locks pair of locks - the current thread and the previous thread;
-\item 0th block - the overlap in the end of term is copied to 0th so that the terms are contiguous - this is no longer needed when we impose that only full terms can fit into the blocks
+\item \textcolor{red}{0th block} - the overlap in the end of term is copied to \textcolor{red}{0th block} so that the terms are contiguous.
 \end{itemize}
 \end{frame}
 
 
 
-\begin{comment}
-
-
-\begin{frame}{Parallel Block Processing \& Overlap Strategy}
-    \textbf{Data Fragmentation Strategy:}
-    \begin{itemize}
-        \item \textbf{Overlapping Blocks:} Raw data streams permit terms to cross block boundaries to maximize ingestion speed.
-        \item \textbf{Optimization (Structural Change):} Realizing terms can overlap requires complex boundary tracking. The modern code enforces that \textit{only complete terms} sit inside blocks—rendering historical 0th-block stitching obsolete.
-    \end{itemize}
-
-    \vspace{0.3cm}
-    \textbf{The "Chained" Locking Mechanism:}
-    \begin{itemize}
-        \item Threads process blocks sequentially but execute in parallel.
-        \item To safely read an overlap boundary, the reading thread must employ a \textbf{Hand-over-Hand (Sliding Window)} lock.
-    \end{itemize}
-\end{frame}
 
 
 
@@ -236,46 +186,18 @@
 
 
 
-\begin{frame}{Visualizing Lock \& Release (Hand-over-Hand)}
-    \begin{center}
-    \small
-    \begin{tabular}{rcccl}
-        \textbf{Step 1:} & Thread $N$ starts $\rightarrow$ & \color{red}[Lock Thread $N-1$] & \color{red}[Lock Thread $N$] & \textit{(Secures boundary)} \\
-        \textbf{Step 2:} & \multicolumn{4}{l}{Thread $N$ safely reads data block and overlapping boundary.} \\
-        \textbf{Step 3:} & Thread $N$ finishes $\rightarrow$ & \color{blue}[Release Thread $N-1$] & \color{blue}[Release Thread $N$] & \textit{(Frees next thread)} \\
-    \end{tabular}
-    \end{center}
-
-    \vspace{0.4cm}
-    \textbf{Why this design works:}
-    \begin{itemize}
-        \item \textbf{No Race Conditions:} Thread $N-1$ cannot destroy or alter its trailing boundary data while Thread $N$ is reading it.
-        \item \textbf{Prevents Deadlocks:} Because threads always acquire locks in strict chronological order ($N-1$ then $N$), a deadlock loop is mathematically impossible.
-    \end{itemize}
-\end{frame}
 
 
-
-\end{comment}
-
-
-
-
-\begin{frame}
-Before changes
+\begin{frame}{SortBots Bottlenecks}
 \begin{itemize}
-\item Default buffer sizes were increased over time 
-\item Size of sortbots increased;
-\item The output from a worker fits in a single block $\longrightarrow$ no advantage on running in parallel;
-\item Each stage of sortbot merge tree runs one after the other
-\item Terms can be partially shared between blocks: when a term is being written in a block and the block finishes, the term keeps being written into the next block
+\item \textcolor{red}{Bottlenecks}: reading of the input with
+\textbf{division of terms} of \textcolor{orange}{workers} to \textcolor{blue}{SortBots}; inverse tree at the end with the
+\textbf{writing to the file by the \textcolor{magenta}{Master}};
 \end{itemize}
+\begin{figure}
+\includegraphics[scale=.3]{images/sb6.png}
+\end{figure}
 \end{frame}
-
-
-
-
-
 
 
 
@@ -285,13 +207,15 @@ Before changes
 
 
 \begin{frame}
-After changes
+\textcolor{red}{Bottlenecks}
+\begin{figure}
+\includegraphics[scale=.30]{images/sb7.png}
+\end{figure}
 \begin{itemize}
-\item Blocks are made smaller
-\item Whole terms can only be written in one block: if it does not fit, it goes into the next block
-\item Workers that fill the blocks try to detect if there is a reader waiting for them
-\item Obtain a lock of the block before filling the block; if not, it means the reading thread already has the lock which means that it is processing the block which means it wants small terms from the current filling block, so we move on to the next block in writing thread
-\item There is always a minimum number of terms in the block - MINIMUMNUMBEROFTERMS
+\item Default buffer sized increased $\longrightarrow$ bigger \textcolor{blue}{SortBots}; 
+\item overlaping from \textcolor{orange}{worker} fits into \textbf{single block} $\longrightarrow$ SortBotTree mechanism does not paralelize
+\item If a \textbf{term} is too big for one block: Worker fills the \textcolor{blue}{SortBots} all the way up to the end of the block, \textbf{overlaping} to the next;
+\item Once a block is completely full, it reaches the top and moves on to the next block
 \end{itemize}
 \end{frame}
 
@@ -301,6 +225,98 @@ After changes
 
 
 
+
+
+
+
+
+
+
+\section{Changes in the SortBot Merge}
+
+\begin{frame}{SortBot Block size}
+\begin{figure}
+\includegraphics[scale=.5]{images/sb8.png}
+\end{figure}
+\begin{itemize}
+\item Decrease the size of the allocations for the \textcolor{blue}{SortBots}: blocks are made smaller;
+\item Whole terms must fit into the block: if it does not fit, it goes into the next block;
+\item \textcolor{red}{0th block} is obsolete.
+\end{itemize}
+\end{frame}
+
+
+
+
+
+
+\section{SortBot Locking}
+\begin{frame}{Locking}
+\begin{figure}
+\includegraphics[scale=.50]{images/sb3.png}
+\end{figure}
+\begin{itemize}
+\item Writting thread always locks pair of locks - the current thread and the previous thread;
+\item Reading threads locks the block where it is reading from;
+\end{itemize}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{frame}{SortBot: Locking}
+\begin{figure}
+\includegraphics[scale=.50]{images/sb4.png}
+\end{figure}
+\begin{itemize}
+\item Worker (W) detects if there is a Reader (R) waiting for them;
+\item W filling the blocks tries to obtain a lock of the block before the current fill block;
+\item If W does not obtain the lock, R thread already has the lock - very soon will be done and ready for more terms;
+\item The W moves to the next block;
+\end{itemize}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{SortBot variables}
+\begin{itemize}
+\item The number of blocks in each SORTBOT has to be at least 4 (due to the locking mechanism) - which corresponds to a minumum of 8 for \textbf{NUMBEROFBLOCKSINSORT};
+\item There ia a minimum number of terms that have to fit the block: \textbf{MINNUMBEROFTERMS};
+\item Make sure a minimum number of terms is written: never make empty block - \textbf{MINWRITENUMBEROFTERMS};
+\end{itemize}
+\end{frame}
+
+
+
+
+
+
+
+
+\begin{frame}
+\begin{itemize}
+\item \textbf{NUMBEROFBLOCKSINSORT} = 8
+\item \textbf{MINNUMBEROFTERMS} = 1
+\item \textbf{MINWRITENUMBEROFTERMS} = 1
+\end{itemize}
+\begin{figure}
+\includegraphics[scale=.5]{images/sb9.png}
+\end{figure}
+\end{frame}
 
 
 
@@ -330,38 +346,35 @@ Some results after the changes
 
 
 
-
-
-
-
-
-
-%\section{Adition of new SortBot}
-
-
-\begin{comment}
-
-
-\begin{frame}
+\begin{frame}{SortBots Bottlenecks}
+\textcolor{red}{Bottlenecks}
+\begin{figure}
+\includegraphics[scale=.30]{images/sb1.png}
+\end{figure}
 \begin{itemize}
-\item SortBotMerge: Explain the changes introduced - NUMBEROFBLOCKSINSORT, MINMUMNUMBEROSTERMS and final choice of parameters
-\item How did we change the code? Explin logic of the main changes
-\item Show results for different tests - improvements in scaling - plots and also profiler screenchots for the tests that are most affected
+\item End of the tree: \textcolor{magenta}{Master} performs last sorting as well as writting of terms into the output;
+\item Performance could be increased by having one last stage of sorting of tha last 2 \textcolor{blue}{SortBots} and \textcolor{magenta}{Master} only writting;
 \end{itemize}
 \end{frame}
 
-\begin{frame}
+
+
+
+
+
+
+
+\begin{frame}{Adition of new SortBot}
 \begin{itemize}
-\item Explain how the sortbots and main thread split the work as they work in parallel - draw tree diagram with sortbots as example
-\item Explain how we introduce a new sortbotand how that changes the splitting of the work, especially for the master, which now will be only writting
-\item Explain logic of the changes made in the code
-\item Explain results for the current benchmarks - not a significative difference because wither most time is spent in sorting or in writing, so the changes do not impact a lot
-\item Introduce new test where the splitting between sorting and writing is more equal, and show screenshot fro profiler
-\item add some results from running this in higher number of threads
+\item Add a new SortBot at the end of the merging tree to do the sort of the streams that comes from last 2 SortBots;
+\item Master only does the writting.
 \end{itemize}
+\begin{figure}
+\includegraphics[scale=.3]{images/sb10.png}
+\end{figure}
 \end{frame}
 
-\end{comment}
+
 
 
 
