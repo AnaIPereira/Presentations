@@ -33,8 +33,8 @@
 %\usepackage{feynmf}
 \DeclareGraphicsRule{*}{mps}{*}{} % for being able to read the produced file
 
-\author{Ana Costa Pereira, Joshua Davies}
-\title{Parallel Scaling}
+\author{Ana Costa Pereira, Josh Davies}
+\title{Parallel Sorting}
 %\institute [University of Liverpool]{\href{mailto:Ana.Costa-Pereira@liverpool.ac.uk}{\underline{Ana.Costa-Pereira@liverpool.ac.uk}}}
 \date{26/06/2026}
 \usepackage{QUT}
@@ -100,20 +100,28 @@
 
 
 \begin{frame}{Introduction}
-\begin{itemize}
-\item Parallel scalings: study of scaling at higher thread number of tform;
-\end{itemize}
 \textbf{Outline of talk}
+\item Parallel scalings: study of scaling at higher thread number of tform;
 \begin{itemize}
 \item Overview of sorting process in parallel at the \textcolor{blue}{SortBot} level;
 \item Benchmarks performence at different thread count;
-\item Changes implemented at the level of \textcolor{blue}{SortBots} and new benchmark results;
+\item Changes implemented at the level of \textcolor{blue}{SortBlocks} and new benchmark results;
 \end{itemize}
 \end{frame}
 
 
 
 
+
+
+
+
+\section{Parallel scaling at higher thread count}
+\begin{frame}
+\begin{figure}
+\includegraphics[scale=.25]{images/plotparallel.png}
+\end{figure}
+\end{frame}
 
 
 
@@ -130,10 +138,10 @@
 \begin{frame}{SortBot Merging}
 \small
 \begin{itemize}
-\item \textcolor{magenta}{Master} $\longrightarrow$ allocations for the workers;
-\item \textcolor{orange}{Worker} $\longrightarrow$ independent stream of sorted terms (identical terms live consecutively in memory);
-\item  $N$ \textcolor{orange}{workers} $\longrightarrow$ $N-2$ \textcolor{blue}{SortBots} are created; 
-\item \textcolor{blue}{SortBots} routine starts; 
+\item \textcolor{magenta}{Master} $\longrightarrow$ distributes terms to the workers;
+\item \textcolor{orange}{Worker} $\longrightarrow$ independent stream of sorted terms;
+\item  $N$ \textcolor{orange}{workers} $\longrightarrow$ $N-2$ \textcolor{blue}{SortBlocks} are created; 
+\item \textcolor{blue}{SortBlocks} routine starts; 
 \end{itemize}
 \begin{figure}
 \includegraphics[scale=.20]{images/sb.png}
@@ -188,10 +196,10 @@
 
 
 
-\begin{frame}{SortBots Bottlenecks}
+\begin{frame}{SortBlocks Bottlenecks}
 \begin{itemize}
-\item \textcolor{red}{Bottlenecks}: reading of the input with
-\textbf{division of terms} of \textcolor{orange}{workers} to \textcolor{blue}{SortBots}; inverse tree at the end with the
+\item \textbf{Bottlenecks}: reading of the input with
+\textbf{division of terms} of \textcolor{orange}{workers} to \textcolor{blue}{SortBlocks}; inverse tree at the end with the
 \textbf{writing to the file by the \textcolor{magenta}{Master}};
 \end{itemize}
 \begin{figure}
@@ -207,15 +215,15 @@
 
 
 \begin{frame}
-\textcolor{red}{Bottlenecks}
+\textbf{Bottlenecks}
 \begin{figure}
 \includegraphics[scale=.30]{images/sb7.png}
 \end{figure}
 \begin{itemize}
-\item Default buffer sized increased $\longrightarrow$ bigger \textcolor{blue}{SortBots}; 
-\item overlaping from \textcolor{orange}{worker} fits into \textbf{single block} $\longrightarrow$ SortBotTree mechanism does not paralelize
-\item If a \textbf{term} is too big for one block: Worker fills the \textcolor{blue}{SortBots} all the way up to the end of the block, \textbf{overlaping} to the next;
-\item Once a block is completely full, it reaches the top and moves on to the next block
+\item Default buffer size increased over time$\longrightarrow$ bigger \textcolor{blue}{SortBlocks}; 
+\item Result from \textcolor{orange}{worker} fits into \textbf{single block} $\longrightarrow$ SortBotTree mechanism does not parallelize
+\item If a \textbf{term} does not fit at the end of a block: Writter fills the \textcolor{blue}{SortBlocks} all the way up to the end of the block, \textbf{overlapping} to the next;
+\item Once a block is completely full, it reaches the top and moves on to the next block.
 \end{itemize}
 \end{frame}
 
@@ -234,14 +242,13 @@
 
 \section{Changes in the SortBot Merge}
 
-\begin{frame}{SortBot Block size}
+\begin{frame}{Change: SortBot Block size}
 \begin{figure}
 \includegraphics[scale=.5]{images/sb8.png}
 \end{figure}
 \begin{itemize}
-\item Decrease the size of the allocations for the \textcolor{blue}{SortBots}: blocks are made smaller;
+\item Require fewer SortBlocks - master buffers not expanded so often;
 \item Whole terms must fit into the block: if it does not fit, it goes into the next block;
-\item \textcolor{red}{0th block} is obsolete.
 \end{itemize}
 \end{frame}
 
@@ -275,12 +282,12 @@
 
 
 
-\begin{frame}{SortBot: Locking}
+\begin{frame}{Change: SortBot Locking}
 \begin{figure}
 \includegraphics[scale=.50]{images/sb4.png}
 \end{figure}
 \begin{itemize}
-\item Worker (W) detects if there is a Reader (R) waiting for them;
+\item Writter (W) detects if there is a Reader (R) waiting for it;
 \item W filling the blocks tries to obtain a lock of the block before the current fill block;
 \item If W does not obtain the lock, R thread already has the lock - very soon will be done and ready for more terms;
 \item The W moves to the next block;
@@ -294,7 +301,7 @@
 
 \begin{frame}{SortBot variables}
 \begin{itemize}
-\item The number of blocks in each SORTBOT has to be at least 4 (due to the locking mechanism) - which corresponds to a minumum of 8 for \textbf{NUMBEROFBLOCKSINSORT};
+\item The number of blocks in each SortBot has to be at least 4 (due to the locking mechanism) - which corresponds to a minumum of 8 for \textbf{NUMBEROFBLOCKSINSORT};
 \item There ia a minimum number of terms that have to fit the block: \textbf{MINNUMBEROFTERMS};
 \item Make sure a minimum number of terms is written: never make empty block - \textbf{MINWRITENUMBEROFTERMS};
 \end{itemize}
@@ -309,8 +316,8 @@
 
 \begin{frame}
 \begin{itemize}
-\item \textbf{NUMBEROFBLOCKSINSORT} = 8
-\item \textbf{MINNUMBEROFTERMS} = 1
+\item \textbf{NUMBEROFBLOCKSINSORT} = 10 $\longrightarrow$ 8
+\item \textbf{MINNUMBEROFTERMS} = 10 $\longrightarrow$ 1
 \item \textbf{MINWRITENUMBEROFTERMS} = 1
 \end{itemize}
 \begin{figure}
@@ -327,8 +334,7 @@
 
 
 
-\begin{frame}
-Some results after the changes
+\begin{frame}{Results after changes}
 \begin{itemize}
 \item No decrease in performance for any tests;
 \item Performance improvement for benchmarks where term merging is expensive (PolyRatFun, PolyRatFunExpand)
@@ -343,17 +349,32 @@ Some results after the changes
 
 
 
+\begin{frame}{Results after changes: Profiler}
+\begin{itemize}
+\item Test:
+\end{itemize}
+\begin{figure}
+\includegraphics[scale=.2]{images/sbform1.png}
+\end{figure}
+\begin{figure}
+\includegraphics[scale=.2]{images/sbform8-1-1.png}
+\end{figure}
+\end{frame}
 
 
 
-\begin{frame}{SortBots Bottlenecks}
-\textcolor{red}{Bottlenecks}
+
+
+
+
+\begin{frame}{SortBlocks Bottlenecks}
+\textbf{Bottlenecks}
 \begin{figure}
 \includegraphics[scale=.30]{images/sb1.png}
 \end{figure}
 \begin{itemize}
 \item End of the tree: \textcolor{magenta}{Master} performs last sorting as well as writting of terms into the output;
-\item Performance could be increased by having one last stage of sorting of tha last 2 \textcolor{blue}{SortBots} and \textcolor{magenta}{Master} only writting;
+\item Performance could be increased by having one last stage of sorting of tha last 2 \textcolor{blue}{SortBlocks} and \textcolor{magenta}{Master} only writting;
 \end{itemize}
 \end{frame}
 
@@ -366,7 +387,7 @@ Some results after the changes
 
 \begin{frame}{Adition of new SortBot}
 \begin{itemize}
-\item Add a new SortBot at the end of the merging tree to do the sort of the streams that comes from last 2 SortBots;
+\item Add a new SortBot at the end of the merging tree to do the sort of the streams that comes from last 2 SortBlocks;
 \item Master only does the writting.
 \end{itemize}
 \begin{figure}
@@ -374,6 +395,18 @@ Some results after the changes
 \end{figure}
 \end{frame}
 
+
+
+
+
+
+\begin{frame}{Final remarks}
+\begin{itemize}
+\item Parallel performance at higher thread needs to be improved;
+\item  \textcolor{blue}{SortBot} changes - $20\%$ improvement for some tests;
+\item Current working on improving  \textcolor{blue}{SortBot} parallelization by addition of extra SortBot at the end of the tree.
+\end{itemize}
+\end{frame}
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.2.9)  19 JUN 2026 11:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.2.9)  24 JUN 2026 16:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1716,12 +1716,12 @@ mpat=1.1.0]{tikz-feynman} so that you can be warned if TikZ-Feynman changes. on
  input line 68.
 
 (./slide.nav)
-<logo.png, id=57, 446.66875pt x 113.42375pt>
+<logo.png, id=61, 446.66875pt x 113.42375pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 82.
 (pdftex.def)             Requested size: 107.55333pt x 27.31052pt.
-<logo_livinno.jpg, id=58, 1003.75pt x 356.33125pt>
+<logo_livinno.jpg, id=62, 1003.75pt x 356.33125pt>
 File: logo_livinno.jpg Graphic file (type jpg)
 <use logo_livinno.jpg>
 Package pdftex.def Info: logo_livinno.jpg  used on input line 82.
@@ -1732,112 +1732,150 @@ Package pdftex.def Info: logo_livinno.jpg  used on input line 82.
 o.jpg>] (./slide.toc) [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 112
-.
 
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.110 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 110
+[][]
+ []
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 110
+.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 112
+LaTeX Font Info:    Trying to load font information for U+msb on input line 110
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+lasy on input line 11
-2.
+0.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) [3
 
 ]
-<images/sb.png, id=155, 783.92876pt x 543.02875pt>
-File: images/sb.png Graphic file (type png)
-<use images/sb.png>
-Package pdftex.def Info: images/sb.png  used on input line 144.
-(pdftex.def)             Requested size: 156.78297pt x 108.60382pt.
+<images/plotparallel.png, id=162, 1161.33875pt x 652.4375pt>
+File: images/plotparallel.png Graphic file (type png)
+<use images/plotparallel.png>
+Package pdftex.def Info: images/plotparallel.png  used on input line 124.
+(pdftex.def)             Requested size: 290.33397pt x 163.10896pt.
  [4
 
- <./images/sb.png>]
-<images/sb5.png, id=186, 262.9825pt x 219.82124pt>
-File: images/sb5.png Graphic file (type png)
-<use images/sb5.png>
-Package pdftex.def Info: images/sb5.png  used on input line 172.
-(pdftex.def)             Requested size: 131.49092pt x 109.91034pt.
+ <./images/plotparallel.png>]
+<images/sb.png, id=190, 783.92876pt x 543.02875pt>
+File: images/sb.png Graphic file (type png)
+<use images/sb.png>
+Package pdftex.def Info: images/sb.png  used on input line 152.
+(pdftex.def)             Requested size: 156.78297pt x 108.60382pt.
  [5
 
- <./images/sb5.png>]
-<images/sb6.png, id=215, 623.32875pt x 362.35374pt>
-File: images/sb6.png Graphic file (type png)
-<use images/sb6.png>
-Package pdftex.def Info: images/sb6.png  used on input line 200.
-(pdftex.def)             Requested size: 187.00006pt x 108.70695pt.
+ <./images/sb.png>]
+<images/sb5.png, id=219, 199.74625pt x 189.70876pt>
+File: images/sb5.png Graphic file (type png)
+<use images/sb5.png>
+Package pdftex.def Info: images/sb5.png  used on input line 180.
+(pdftex.def)             Requested size: 99.87288pt x 94.85414pt.
  [6
 
- <./images/sb6.png>]
-<images/sb7.png, id=242, 623.32875pt x 161.60374pt>
-File: images/sb7.png Graphic file (type png)
-<use images/sb7.png>
-Package pdftex.def Info: images/sb7.png  used on input line 220.
-(pdftex.def)             Requested size: 187.00006pt x 48.48149pt.
+ <./images/sb5.png>]
+<images/sb6.png, id=248, 623.32875pt x 362.35374pt>
+File: images/sb6.png Graphic file (type png)
+<use images/sb6.png>
+Package pdftex.def Info: images/sb6.png  used on input line 208.
+(pdftex.def)             Requested size: 187.00006pt x 108.70695pt.
  [7
 
+ <./images/sb6.png>]
+<images/sb7.png, id=277, 623.32875pt x 161.60374pt>
+File: images/sb7.png Graphic file (type png)
+<use images/sb7.png>
+Package pdftex.def Info: images/sb7.png  used on input line 228.
+(pdftex.def)             Requested size: 187.00006pt x 48.48149pt.
+ [8
+
  <./images/sb7.png>]
-<images/sb8.png, id=271, 203.76125pt x 150.5625pt>
+<images/sb8.png, id=304, 203.76125pt x 150.5625pt>
 File: images/sb8.png Graphic file (type png)
 <use images/sb8.png>
-Package pdftex.def Info: images/sb8.png  used on input line 246.
+Package pdftex.def Info: images/sb8.png  used on input line 253.
 (pdftex.def)             Requested size: 101.88037pt x 75.28105pt.
-
-[8
-
- <./images/sb8.png>]
-<images/sb3.png, id=298, 342.27875pt x 102.3825pt>
-File: images/sb3.png Graphic file (type png)
-<use images/sb3.png>
-Package pdftex.def Info: images/sb3.png  used on input line 262.
-(pdftex.def)             Requested size: 171.13895pt x 51.19112pt.
  [9
 
- <./images/sb3.png>]
-<images/sb4.png, id=326, 342.27875pt x 232.87pt>
-File: images/sb4.png Graphic file (type png)
-<use images/sb4.png>
-Package pdftex.def Info: images/sb4.png  used on input line 288.
-(pdftex.def)             Requested size: 171.13895pt x 116.43471pt.
+ <./images/sb8.png>]
+<images/sb3.png, id=331, 342.27875pt x 102.3825pt>
+File: images/sb3.png Graphic file (type png)
+<use images/sb3.png>
+Package pdftex.def Info: images/sb3.png  used on input line 269.
+(pdftex.def)             Requested size: 171.13895pt x 51.19112pt.
  [10
 
- <./images/sb4.png>] [11
+ <./images/sb3.png>]
+<images/sb4.png, id=359, 342.27875pt x 232.87pt>
+File: images/sb4.png Graphic file (type png)
+<use images/sb4.png>
+Package pdftex.def Info: images/sb4.png  used on input line 295.
+(pdftex.def)             Requested size: 171.13895pt x 116.43471pt.
+
+[11
+
+ <./images/sb4.png>] [12
 
 ]
-<images/sb9.png, id=381, 161.60374pt x 102.3825pt>
+<images/sb9.png, id=414, 161.60374pt x 102.3825pt>
 File: images/sb9.png Graphic file (type png)
 <use images/sb9.png>
-Package pdftex.def Info: images/sb9.png  used on input line 319.
+Package pdftex.def Info: images/sb9.png  used on input line 326.
 (pdftex.def)             Requested size: 80.80167pt x 51.19112pt.
+ [13
 
-[12
-
- <./images/sb9.png>] [13
+ <./images/sb9.png>] [14
 
 ]
-<images/sb1.png, id=436, 392.46625pt x 221.82875pt>
-File: images/sb1.png Graphic file (type png)
-<use images/sb1.png>
-Package pdftex.def Info: images/sb1.png  used on input line 358.
-(pdftex.def)             Requested size: 117.74077pt x 66.54912pt.
- [14
-
- <./images/sb1.png>]
-<images/sb10.png, id=463, 623.32875pt x 482.80376pt>
-File: images/sb10.png Graphic file (type png)
-<use images/sb10.png>
-Package pdftex.def Info: images/sb10.png  used on input line 375.
-(pdftex.def)             Requested size: 187.00006pt x 144.84224pt.
+<images/sbform1.png, id=469, 1375.1375pt x 323.2075pt>
+File: images/sbform1.png Graphic file (type png)
+<use images/sbform1.png>
+Package pdftex.def Info: images/sbform1.png  used on input line 362.
+(pdftex.def)             Requested size: 275.02263pt x 64.64035pt.
+<images/sbform8-1-1.png, id=470, 1375.1375pt x 323.2075pt>
+File: images/sbform8-1-1.png Graphic file (type png)
+<use images/sbform8-1-1.png>
+Package pdftex.def Info: images/sbform8-1-1.png  used on input line 362.
+(pdftex.def)             Requested size: 275.02263pt x 64.64035pt.
  [15
 
- <./images/sb10.png>]
+ <./images/sbform1.png> <./images/sbform8-1-1.png>]
+<images/sb1.png, id=500, 392.46625pt x 221.82875pt>
+File: images/sb1.png Graphic file (type png)
+<use images/sb1.png>
+Package pdftex.def Info: images/sb1.png  used on input line 379.
+(pdftex.def)             Requested size: 117.74077pt x 66.54912pt.
+ [16
+
+ <./images/sb1.png>]
+<images/sb10.png, id=528, 623.32875pt x 482.80376pt>
+File: images/sb10.png Graphic file (type png)
+<use images/sb10.png>
+Package pdftex.def Info: images/sb10.png  used on input line 396.
+(pdftex.def)             Requested size: 187.00006pt x 144.84224pt.
+ [17
+
+ <./images/sb10.png>] [18
+
+]
 \tf@nav=\write8
 \openout8 = `slide.nav'.
 
@@ -1847,16 +1885,15 @@ Package pdftex.def Info: images/sb10.png  used on input line 375.
 \tf@snm=\write10
 \openout10 = `slide.snm'.
 
-
-(./slide.aux)
+ (./slide.aux)
 Package rerunfilecheck Info: File `slide.out' has not changed.
-(rerunfilecheck)             Checksum: 0289A5428A41D3092D4F1E6329A35AE9;644.
+(rerunfilecheck)             Checksum: DEBD014AC7920B3A1E338A99A348DE6B;897.
  ) 
 Here is how much of TeX's memory you used:
- 32207 strings out of 480129
- 670378 string characters out of 5893410
- 960413 words of memory out of 5000000
- 49410 multiletter control sequences out of 15000+600000
+ 32245 strings out of 480129
+ 671042 string characters out of 5893410
+ 960387 words of memory out of 5000000
+ 49438 multiletter control sequences out of 15000+600000
  482701 words of font info for 69 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  128i,14n,122p,406b,680s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1869,10 +1906,10 @@ b></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb></usr/share/texmf/
 fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfss1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1095.pfb
 >
-Output written on slide.pdf (15 pages, 354970 bytes).
+Output written on slide.pdf (18 pages, 519375 bytes).
 PDF statistics:
- 540 PDF objects out of 1000 (max. 8388607)
- 452 compressed objects within 5 object streams
- 35 named destinations out of 1000 (max. 500000)
- 243 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 633 PDF objects out of 1000 (max. 8388607)
+ 535 compressed objects within 6 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 266 words of extra memory for PDF output out of 10000 (max. 10000000)
 
