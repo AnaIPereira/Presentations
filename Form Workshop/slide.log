@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.2.9)  24 JUN 2026 16:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.2.9)  25 JUN 2026 16:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1716,12 +1716,12 @@ mpat=1.1.0]{tikz-feynman} so that you can be warned if TikZ-Feynman changes. on
  input line 68.
 
 (./slide.nav)
-<logo.png, id=61, 446.66875pt x 113.42375pt>
+<logo.png, id=57, 446.66875pt x 113.42375pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 82.
 (pdftex.def)             Requested size: 107.55333pt x 27.31052pt.
-<logo_livinno.jpg, id=62, 1003.75pt x 356.33125pt>
+<logo_livinno.jpg, id=58, 1003.75pt x 356.33125pt>
 File: logo_livinno.jpg Graphic file (type jpg)
 <use logo_livinno.jpg>
 Package pdftex.def Info: logo_livinno.jpg  used on input line 82.
@@ -1739,68 +1739,68 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.110 \end{frame}
+l.108 \end{frame}
                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) detected at line 110
+Underfull \hbox (badness 10000) detected at line 108
 [][]
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 110
+LaTeX Font Info:    Trying to load font information for U+msa on input line 108
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 110
+LaTeX Font Info:    Trying to load font information for U+msb on input line 108
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 11
-0.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 10
+8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) [3
 
 ]
-<images/plotparallel.png, id=162, 1161.33875pt x 652.4375pt>
+<images/plotparallel.png, id=156, 1161.33875pt x 652.4375pt>
 File: images/plotparallel.png Graphic file (type png)
 <use images/plotparallel.png>
-Package pdftex.def Info: images/plotparallel.png  used on input line 124.
-(pdftex.def)             Requested size: 290.33397pt x 163.10896pt.
+Package pdftex.def Info: images/plotparallel.png  used on input line 125.
+(pdftex.def)             Requested size: 232.26363pt x 130.48518pt.
  [4
 
  <./images/plotparallel.png>]
-<images/sb.png, id=190, 783.92876pt x 543.02875pt>
+<images/sb.png, id=187, 783.92876pt x 543.02875pt>
 File: images/sb.png Graphic file (type png)
 <use images/sb.png>
-Package pdftex.def Info: images/sb.png  used on input line 152.
+Package pdftex.def Info: images/sb.png  used on input line 153.
 (pdftex.def)             Requested size: 156.78297pt x 108.60382pt.
  [5
 
  <./images/sb.png>]
-<images/sb5.png, id=219, 199.74625pt x 189.70876pt>
+<images/sb5.png, id=214, 193.72375pt x 189.70876pt>
 File: images/sb5.png Graphic file (type png)
 <use images/sb5.png>
-Package pdftex.def Info: images/sb5.png  used on input line 180.
-(pdftex.def)             Requested size: 99.87288pt x 94.85414pt.
+Package pdftex.def Info: images/sb5.png  used on input line 181.
+(pdftex.def)             Requested size: 96.86163pt x 94.85414pt.
  [6
 
  <./images/sb5.png>]
-<images/sb6.png, id=248, 623.32875pt x 362.35374pt>
+<images/sb6.png, id=243, 623.32875pt x 362.35374pt>
 File: images/sb6.png Graphic file (type png)
 <use images/sb6.png>
-Package pdftex.def Info: images/sb6.png  used on input line 208.
+Package pdftex.def Info: images/sb6.png  used on input line 203.
 (pdftex.def)             Requested size: 187.00006pt x 108.70695pt.
  [7
 
  <./images/sb6.png>]
-<images/sb7.png, id=277, 623.32875pt x 161.60374pt>
+<images/sb7.png, id=272, 623.32875pt x 161.60374pt>
 File: images/sb7.png Graphic file (type png)
 <use images/sb7.png>
 Package pdftex.def Info: images/sb7.png  used on input line 228.
@@ -1808,68 +1808,68 @@ Package pdftex.def Info: images/sb7.png  used on input line 228.
  [8
 
  <./images/sb7.png>]
-<images/sb8.png, id=304, 203.76125pt x 150.5625pt>
+<images/sb8.png, id=299, 223.83624pt x 150.5625pt>
 File: images/sb8.png Graphic file (type png)
 <use images/sb8.png>
 Package pdftex.def Info: images/sb8.png  used on input line 253.
-(pdftex.def)             Requested size: 101.88037pt x 75.28105pt.
+(pdftex.def)             Requested size: 111.91785pt x 75.28105pt.
  [9
 
  <./images/sb8.png>]
-<images/sb3.png, id=331, 342.27875pt x 102.3825pt>
+<images/sb3.png, id=326, 221.82875pt x 102.3825pt>
 File: images/sb3.png Graphic file (type png)
 <use images/sb3.png>
-Package pdftex.def Info: images/sb3.png  used on input line 269.
-(pdftex.def)             Requested size: 171.13895pt x 51.19112pt.
+Package pdftex.def Info: images/sb3.png  used on input line 274.
+(pdftex.def)             Requested size: 110.9141pt x 51.19112pt.
  [10
 
  <./images/sb3.png>]
-<images/sb4.png, id=359, 342.27875pt x 232.87pt>
+<images/sb4.png, id=354, 222.8325pt x 223.83624pt>
 File: images/sb4.png Graphic file (type png)
 <use images/sb4.png>
-Package pdftex.def Info: images/sb4.png  used on input line 295.
-(pdftex.def)             Requested size: 171.13895pt x 116.43471pt.
+Package pdftex.def Info: images/sb4.png  used on input line 300.
+(pdftex.def)             Requested size: 111.41597pt x 111.91785pt.
 
 [11
 
  <./images/sb4.png>] [12
 
 ]
-<images/sb9.png, id=414, 161.60374pt x 102.3825pt>
+<images/sb9.png, id=410, 181.67876pt x 102.3825pt>
 File: images/sb9.png Graphic file (type png)
 <use images/sb9.png>
-Package pdftex.def Info: images/sb9.png  used on input line 326.
-(pdftex.def)             Requested size: 80.80167pt x 51.19112pt.
+Package pdftex.def Info: images/sb9.png  used on input line 333.
+(pdftex.def)             Requested size: 90.83914pt x 51.19112pt.
  [13
 
  <./images/sb9.png>] [14
 
 ]
-<images/sbform1.png, id=469, 1375.1375pt x 323.2075pt>
+<images/sbform1.png, id=465, 1381.16pt x 364.36125pt>
 File: images/sbform1.png Graphic file (type png)
 <use images/sbform1.png>
-Package pdftex.def Info: images/sbform1.png  used on input line 362.
-(pdftex.def)             Requested size: 275.02263pt x 64.64035pt.
-<images/sbform8-1-1.png, id=470, 1375.1375pt x 323.2075pt>
+Package pdftex.def Info: images/sbform1.png  used on input line 373.
+(pdftex.def)             Requested size: 276.2271pt x 72.87096pt.
+<images/sbform8-1-1.png, id=466, 1333.98375pt x 365.365pt>
 File: images/sbform8-1-1.png Graphic file (type png)
 <use images/sbform8-1-1.png>
-Package pdftex.def Info: images/sbform8-1-1.png  used on input line 362.
-(pdftex.def)             Requested size: 275.02263pt x 64.64035pt.
+Package pdftex.def Info: images/sbform8-1-1.png  used on input line 373.
+(pdftex.def)             Requested size: 266.79202pt x 73.0717pt.
  [15
 
  <./images/sbform1.png> <./images/sbform8-1-1.png>]
-<images/sb1.png, id=500, 392.46625pt x 221.82875pt>
+<images/sb1.png, id=496, 392.46625pt x 221.82875pt>
 File: images/sb1.png Graphic file (type png)
 <use images/sb1.png>
-Package pdftex.def Info: images/sb1.png  used on input line 379.
+Package pdftex.def Info: images/sb1.png  used on input line 393.
 (pdftex.def)             Requested size: 117.74077pt x 66.54912pt.
  [16
 
  <./images/sb1.png>]
-<images/sb10.png, id=528, 623.32875pt x 482.80376pt>
+<images/sb10.png, id=524, 623.32875pt x 482.80376pt>
 File: images/sb10.png Graphic file (type png)
 <use images/sb10.png>
-Package pdftex.def Info: images/sb10.png  used on input line 396.
+Package pdftex.def Info: images/sb10.png  used on input line 410.
 (pdftex.def)             Requested size: 187.00006pt x 144.84224pt.
  [17
 
@@ -1887,13 +1887,13 @@ Package pdftex.def Info: images/sb10.png  used on input line 396.
 
  (./slide.aux)
 Package rerunfilecheck Info: File `slide.out' has not changed.
-(rerunfilecheck)             Checksum: DEBD014AC7920B3A1E338A99A348DE6B;897.
+(rerunfilecheck)             Checksum: 0289A5428A41D3092D4F1E6329A35AE9;644.
  ) 
 Here is how much of TeX's memory you used:
- 32245 strings out of 480129
- 671042 string characters out of 5893410
- 960387 words of memory out of 5000000
- 49438 multiletter control sequences out of 15000+600000
+ 32240 strings out of 480129
+ 670996 string characters out of 5893410
+ 960507 words of memory out of 5000000
+ 49434 multiletter control sequences out of 15000+600000
  482701 words of font info for 69 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  128i,14n,122p,406b,680s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1906,10 +1906,10 @@ b></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb></usr/share/texmf/
 fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfss1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1095.pfb
 >
-Output written on slide.pdf (18 pages, 519375 bytes).
+Output written on slide.pdf (18 pages, 531567 bytes).
 PDF statistics:
- 633 PDF objects out of 1000 (max. 8388607)
- 535 compressed objects within 6 object streams
- 42 named destinations out of 1000 (max. 500000)
- 266 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 629 PDF objects out of 1000 (max. 8388607)
+ 531 compressed objects within 6 object streams
+ 41 named destinations out of 1000 (max. 500000)
+ 258 words of extra memory for PDF output out of 10000 (max. 10000000)
 

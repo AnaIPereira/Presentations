@@ -34,7 +34,7 @@
 \DeclareGraphicsRule{*}{mps}{*}{} % for being able to read the produced file
 
 \author{Ana Costa Pereira, Josh Davies}
-\title{Parallel Sorting}
+\title{Parallel Sorting in TFORM}
 %\institute [University of Liverpool]{\href{mailto:Ana.Costa-Pereira@liverpool.ac.uk}{\underline{Ana.Costa-Pereira@liverpool.ac.uk}}}
 \date{26/06/2026}
 \usepackage{QUT}
@@ -97,15 +97,13 @@
 
 
 
-
-
 \begin{frame}{Introduction}
 \textbf{Outline of talk}
 \item Parallel scalings: study of scaling at higher thread number of tform;
 \begin{itemize}
 \item Overview of sorting process in parallel at the \textcolor{blue}{SortBot} level;
-\item Benchmarks performence at different thread count;
-\item Changes implemented at the level of \textcolor{blue}{SortBlocks} and new benchmark results;
+\item Benchmark performence at different thread count;
+\item Changes implemented at the level of \textcolor{blue}{SortBlocks} and new benchmark results.
 \end{itemize}
 \end{frame}
 
@@ -116,11 +114,14 @@
 
 
 
-\section{Parallel scaling at higher thread count}
-\begin{frame}
+\begin{frame}{Parallel scaling at higher thread count}
 \begin{figure}
-\includegraphics[scale=.25]{images/plotparallel.png}
+\includegraphics[scale=.20]{images/plotparallel.png}
 \end{figure}
+\begin{itemize}
+\item sort-disk, sort-large, sort-small, trace scale up to 64;
+\item scaling is not good for other tests for $>16$ \textcolor{orange}{workers}.
+\end{itemize}
 \end{frame}
 
 
@@ -168,7 +169,7 @@
 
 \begin{frame}{SortBot: Overlaping of terms}
 \begin{itemize}
-\item \textcolor{blue}{SortBot} $\longrightarrow$ blocks;
+\item \textcolor{blue}{SortBot} $\longrightarrow$ ring buffer with blocks;
 \end{itemize}
 \begin{figure}
 \includegraphics[scale=.50]{images/sb5.png}
@@ -190,22 +191,21 @@
 
 
 
-
-
-
-
-
-
 \begin{frame}{SortBlocks Bottlenecks}
 \begin{itemize}
 \item \textbf{Bottlenecks}: reading of the input with
-\textbf{division of terms} of \textcolor{orange}{workers} to \textcolor{blue}{SortBlocks}; inverse tree at the end with the
+\textbf{division of terms} from \textcolor{orange}{workers} to \textcolor{blue}{SortBlocks}; inverse tree at the end with the
 \textbf{writing to the file by the \textcolor{magenta}{Master}};
 \end{itemize}
 \begin{figure}
 \includegraphics[scale=.3]{images/sb6.png}
 \end{figure}
 \end{frame}
+
+
+
+
+
 
 
 
@@ -222,7 +222,7 @@
 \begin{itemize}
 \item Default buffer size increased over time$\longrightarrow$ bigger \textcolor{blue}{SortBlocks}; 
 \item Result from \textcolor{orange}{worker} fits into \textbf{single block} $\longrightarrow$ SortBotTree mechanism does not parallelize
-\item If a \textbf{term} does not fit at the end of a block: Writter fills the \textcolor{blue}{SortBlocks} all the way up to the end of the block, \textbf{overlapping} to the next;
+\item If a \textbf{term} does not fit at the end of a block: Writer fills the \textcolor{blue}{SortBlocks} all the way up to the end of the block, \textbf{overlapping} to the next;
 \item Once a block is completely full, it reaches the top and moves on to the next block.
 \end{itemize}
 \end{frame}
@@ -247,10 +247,15 @@
 \includegraphics[scale=.5]{images/sb8.png}
 \end{figure}
 \begin{itemize}
-\item Require fewer SortBlocks - master buffers not expanded so often;
+\item Require fewer \textcolor{blue}{SortBlocks} - master buffers not expanded so often;
 \item Whole terms must fit into the block: if it does not fit, it goes into the next block;
 \end{itemize}
 \end{frame}
+
+
+
+
+
 
 
 
@@ -263,8 +268,8 @@
 \includegraphics[scale=.50]{images/sb3.png}
 \end{figure}
 \begin{itemize}
-\item Writting thread always locks pair of locks - the current thread and the previous thread;
-\item Reading threads locks the block where it is reading from;
+\item Reading thread always locks pair of locks - the current thread and the previous thread;
+\item Writing thread locks the block where it is reading from;
 \end{itemize}
 \end{frame}
 
@@ -287,7 +292,7 @@
 \includegraphics[scale=.50]{images/sb4.png}
 \end{figure}
 \begin{itemize}
-\item Writter (W) detects if there is a Reader (R) waiting for it;
+\item Writer (W) detects if there is a Reader (R) waiting for it;
 \item W filling the blocks tries to obtain a lock of the block before the current fill block;
 \item If W does not obtain the lock, R thread already has the lock - very soon will be done and ready for more terms;
 \item The W moves to the next block;
@@ -301,8 +306,8 @@
 
 \begin{frame}{SortBot variables}
 \begin{itemize}
-\item The number of blocks in each SortBot has to be at least 4 (due to the locking mechanism) - which corresponds to a minumum of 8 for \textbf{NUMBEROFBLOCKSINSORT};
-\item There ia a minimum number of terms that have to fit the block: \textbf{MINNUMBEROFTERMS};
+\item The number of blocks in each \textcolor{blue}{SortBot} has to be at least 4 (due to the locking mechanism) - which corresponds to a minimum of 8 for \textbf{NUMBEROFBLOCKSINSORT};
+\item There is a minimum number of terms that have to fit the block: \textbf{MINNUMBEROFTERMS};
 \item Make sure a minimum number of terms is written: never make empty block - \textbf{MINWRITENUMBEROFTERMS};
 \end{itemize}
 \end{frame}
@@ -314,7 +319,9 @@
 
 
 
-\begin{frame}
+\begin{frame}{Final result}
+\href{https://github.com/form-dev/form/pull/831}{PR \#831}
+
 \begin{itemize}
 \item \textbf{NUMBEROFBLOCKSINSORT} = 10 $\longrightarrow$ 8
 \item \textbf{MINNUMBEROFTERMS} = 10 $\longrightarrow$ 1
@@ -335,6 +342,7 @@
 
 
 \begin{frame}{Results after changes}
+See Josh's talk
 \begin{itemize}
 \item No decrease in performance for any tests;
 \item Performance improvement for benchmarks where term merging is expensive (PolyRatFun, PolyRatFunExpand)
@@ -351,7 +359,10 @@
 
 \begin{frame}{Results after changes: Profiler}
 \begin{itemize}
-\item Test:
+\item Profiler: AMDuProf with 4 workers;
+\item Test: generate a large number os terms, mostly sorting them;
+\item Green: Masters/threads in activity;
+\item Red: Master using \textbf{PutOut};
 \end{itemize}
 \begin{figure}
 \includegraphics[scale=.2]{images/sbform1.png}
@@ -367,14 +378,17 @@
 
 
 
+
+
+
 \begin{frame}{SortBlocks Bottlenecks}
 \textbf{Bottlenecks}
 \begin{figure}
 \includegraphics[scale=.30]{images/sb1.png}
 \end{figure}
 \begin{itemize}
-\item End of the tree: \textcolor{magenta}{Master} performs last sorting as well as writting of terms into the output;
-\item Performance could be increased by having one last stage of sorting of tha last 2 \textcolor{blue}{SortBlocks} and \textcolor{magenta}{Master} only writting;
+\item End of the tree: \textcolor{magenta}{Master} performs last sorting as well as writing of terms into the output;
+\item Performance could be increased by having one last stage of sorting of the last 2 \textcolor{blue}{SortBlocks} and \textcolor{magenta}{Master} only writing;
 \end{itemize}
 \end{frame}
 
@@ -385,10 +399,10 @@
 
 
 
-\begin{frame}{Adition of new SortBot}
+\begin{frame}{Future Work: Addition of new SortBot}
 \begin{itemize}
-\item Add a new SortBot at the end of the merging tree to do the sort of the streams that comes from last 2 SortBlocks;
-\item Master only does the writting.
+\item Add a new \textcolor{blue}{SortBot} at the end of the merging tree to sort the streams that come from last 2 \textcolor{blue}{SortBlocks};
+\item \textcolor{magenta}{Master} only does the writing.
 \end{itemize}
 \begin{figure}
 \includegraphics[scale=.3]{images/sb10.png}
@@ -403,8 +417,8 @@
 \begin{frame}{Final remarks}
 \begin{itemize}
 \item Parallel performance at higher thread needs to be improved;
-\item  \textcolor{blue}{SortBot} changes - $20\%$ improvement for some tests;
-\item Current working on improving  \textcolor{blue}{SortBot} parallelization by addition of extra SortBot at the end of the tree.
+\item \textcolor{blue}{SortBot} changes - up to $30\%$ improvement for some tests;
+\item Current working on improving \textcolor{blue}{SortBot} parallelization by addition of extra \textcolor{blue}{SortBot} at the end of the tree.
 \end{itemize}
 \end{frame}
 

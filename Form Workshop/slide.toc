@@ -1,5 +1,4 @@
-\beamer@sectionintoc {1}{Parallel scaling at higher thread count}{4}{0}{1}
-\beamer@sectionintoc {2}{SortBot Merging}{5}{0}{2}
-\beamer@sectionintoc {3}{SortBot Bottlenecks and changes}{6}{0}{3}
-\beamer@sectionintoc {4}{Changes in the SortBot Merge}{9}{0}{4}
-\beamer@sectionintoc {5}{SortBot Locking}{10}{0}{5}
+\beamer@sectionintoc {1}{SortBot Merging}{5}{0}{1}
+\beamer@sectionintoc {2}{SortBot Bottlenecks and changes}{6}{0}{2}
+\beamer@sectionintoc {3}{Changes in the SortBot Merge}{9}{0}{3}
+\beamer@sectionintoc {4}{SortBot Locking}{10}{0}{4}
