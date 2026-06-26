@@ -141,8 +141,8 @@
 \begin{itemize}
 \item \textcolor{magenta}{Master} $\longrightarrow$ distributes terms to the workers;
 \item \textcolor{orange}{Worker} $\longrightarrow$ independent stream of sorted terms;
-\item  $N$ \textcolor{orange}{workers} $\longrightarrow$ $N-2$ \textcolor{blue}{SortBlocks} are created; 
-\item \textcolor{blue}{SortBlocks} routine starts; 
+\item  $N$ \textcolor{orange}{workers} $\longrightarrow$ $N-2$ \textcolor{blue}{SortBots} are created; 
+\item \textcolor{blue}{SortBot} routine starts; 
 \end{itemize}
 \begin{figure}
 \includegraphics[scale=.20]{images/sb.png}
@@ -268,8 +268,8 @@
 \includegraphics[scale=.50]{images/sb3.png}
 \end{figure}
 \begin{itemize}
-\item Reading thread always locks pair of locks - the current thread and the previous thread;
-\item Writing thread locks the block where it is reading from;
+\item Reading thread always locks pair of blocks - the current one and the previous;
+\item Writing thread locks the block where it is writing;
 \end{itemize}
 \end{frame}
 
