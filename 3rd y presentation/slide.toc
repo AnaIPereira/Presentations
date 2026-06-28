@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{CKM matrix}{4}{0}{1}
+\beamer@sectionintoc {2}{$V_{ud}$ from neutron decay}{5}{0}{2}
+\beamer@sectionintoc {3}{$V_{ud}$ EFT framework}{6}{0}{3}
+\beamer@sectionintoc {4}{NLO EW corrections}{9}{0}{4}
+\beamer@sectionintoc {5}{NNLO EW corrections}{11}{0}{5}
