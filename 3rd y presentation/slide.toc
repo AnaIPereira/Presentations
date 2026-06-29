@@ -3,3 +3,7 @@
 \beamer@sectionintoc {3}{$V_{ud}$ EFT framework}{6}{0}{3}
 \beamer@sectionintoc {4}{NLO EW corrections}{9}{0}{4}
 \beamer@sectionintoc {5}{NNLO EW corrections}{11}{0}{5}
+\beamer@sectionintoc {6}{SortBot Merging}{17}{0}{6}
+\beamer@sectionintoc {7}{SortBot Bottlenecks and changes}{18}{0}{7}
+\beamer@sectionintoc {8}{Changes in the SortBot Merge}{21}{0}{8}
+\beamer@sectionintoc {9}{SortBot Locking}{22}{0}{9}
